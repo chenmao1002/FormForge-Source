@@ -3,6 +3,7 @@
 !/.gitignore
 !/.gitattributes
 !/README.md
+!/README.en.md
 !/AGENTS.md
 !/package.json
 !/package-lock.json
@@ -23,6 +24,16 @@
 
 # Only reviewed provenance and functional standards belong here.
 /docs/*
+!/docs/images/
+/docs/images/*
+!/docs/images/gamepad-assembled.png
+!/docs/images/gamepad-exploded.png
+!/docs/images/schematic-workspace.png
+!/docs/images/usb-rs422-pcb.png
+!/docs/images/gamepad-pcb.png
+!/docs/images/fan-assembly.png
+!/docs/images/handheld-assembly.png
+!/docs/images/firmware-workspace.png
 !/docs/migrations/
 /docs/migrations/*
 !/docs/migrations/M3-parser.json
