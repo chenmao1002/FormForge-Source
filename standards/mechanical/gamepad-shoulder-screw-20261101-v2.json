@@ -1,0 +1,24 @@
+{
+  "kind": "hardware-catalog",
+  "version": 2,
+  "units": "mm",
+  "scope": "New project custom low-head shoulder screw. Frozen v1 remains available; no commercial SKU, supplier availability or physical qualification claimed.",
+  "parts": {
+    "ff-shoulder-m2-d3-s3p3-t4p5-v2": {
+      "kind": "screw", "thread": "M2", "pitch": 0.4,
+      "diameter": 2, "length": 7.8,
+      "shoulderDiameter": 3, "shoulderLength": 3.3,
+      "headDiameter": 5.5, "headHeight": 1.3,
+      "driveSize": 1.5, "driveDepth": 0.8,
+      "material": "Custom machined303stainless, passivated, shaft groundRa0.4; supplier process/torque qualification required",
+      "source": "urn:formforge:gamepad-A:custom-low-head-shoulder-screw:20261101:v2",
+      "sourceProduct": "FF-SHOULDER-M2-D3-S3.3-T4.5-LOW-V2",
+      "shaftDiameterLimitsMm": [2.995, 3.000],
+      "shoulderLengthToleranceMm": 0.02,
+      "headHeightToleranceMm": 0.03,
+      "threadLengthMm": 4.5,
+      "threadFit": "M2x0.4external6g, gauge acceptance; nominal CAD omits thread flanks",
+      "assemblyIntent": "Shoulder end clamps CNC support; head retains floating3mmPOMear.0.5mmnominalmaterial remains below the AF1.5socket. Shaft/torque/drive strength need prototype qualification."
+    }
+  }
+}

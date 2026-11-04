@@ -1,0 +1,79 @@
+{
+  "sourceRoot": "local-source/1021C",
+  "sourceCommit": "f599e8aa3224ec89ab1168e17b84f4f57dc79281",
+  "date": "2026-10-21",
+  "authorization": "User explicitly authorized local reuse of selected 1021C code and workflows.",
+  "license": "No applicable root/source module license found; UNKNOWN. Local user-authorized reuse only; no new redistribution grant asserted.",
+  "files": [
+    {
+      "source": "local-source/1021C/workers/circuit_path_readability.py",
+      "sourceSha256": "68147cf8065e16665a6621a05dd0bfef0c88e00beb24d9a86d66fce49d39365b",
+      "archive": "vendor/pcb-1021c-readability/circuit_path_readability.py",
+      "archiveSha256": "68147cf8065e16665a6621a05dd0bfef0c88e00beb24d9a86d66fce49d39365b",
+      "derived": "src/formforge/adapters/route_path_readability.py",
+      "derivedSha256": "8cc4d4af7b8622cfb927ca61f0c52391b5e6a465a0643977fca81daa1c99539c",
+      "adaptation": "Full geometry module; import adapted to worker and package names."
+    },
+    {
+      "source": "local-source/1021C/workers/circuit_readability_policy.py",
+      "sourceSha256": "6e9055a6cfd79e8cdaacf657c5a26390b9d6f7835a7c9f52e742599fc339e868",
+      "archive": "vendor/pcb-1021c-readability/circuit_readability_policy.py",
+      "archiveSha256": "6e9055a6cfd79e8cdaacf657c5a26390b9d6f7835a7c9f52e742599fc339e868",
+      "derived": "src/formforge/adapters/route_readability_policy.py",
+      "derivedSha256": "c6e17f2dcff512c4264956e7adb7b2df88310ac5da62ebec54ab9d9a2f499e76",
+      "adaptation": "Only _clusters, metrics and quality_key extracted; old growth settings excluded."
+    },
+    {
+      "source": "local-source/1021C/tests/test_route_readability.py",
+      "sourceSha256": "9f8de634da0a0529707fa0236a9c43aedb2dd5ff13145d2541ad1a5a28ad24d8",
+      "archive": "vendor/pcb-1021c-readability/test_route_readability.py",
+      "archiveSha256": "9f8de634da0a0529707fa0236a9c43aedb2dd5ff13145d2541ad1a5a28ad24d8",
+      "derived": "tests/test_route_readability_kernel.py",
+      "derivedSha256": "8f457c9cccf6b170f12e6a2f4334ed7b969e1054382a12575ab9a3d7f082223e",
+      "adaptation": "ReadabilityTests class only; FormForge imports; no upstream grid router imported."
+    }
+  ],
+  "reviewedReferences": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "6ccb869a84d4f980b5860c44778729d46b343462f34664e233ea30ef50528daf",
+      "runtimeCopied": false
+    },
+    {
+      "path": "用户需求.md",
+      "sha256": "15ebb0e9d54c76e857e32c5a16449cea3148cb933a03c02546086aefe1bd5414",
+      "runtimeCopied": false
+    },
+    {
+      "path": "项目经验.md",
+      "sha256": "98f91120877448c959683a24f0f51659188164d4d37eb5c6ec5e4a8bd3f1afa3",
+      "runtimeCopied": false
+    },
+    {
+      "path": "开发进度.md",
+      "sha256": "d3f5f0172609269b57030aa49c0ee1223a600597c99d8c2fc2bd401f5cb44843",
+      "runtimeCopied": false
+    },
+    {
+      "path": "README.md",
+      "sha256": "4abd279d94e0f341b43ee63c76e142bd1b53a6cfbd5d63b0ead6164ca65142ed",
+      "runtimeCopied": false
+    },
+    {
+      "path": "docs/pcb-layout-learning-2026-10-09.md",
+      "sha256": "c343084b0696b62cf3eefc73ab0441db6982bbc00decf2046dde365929eb1f5c",
+      "runtimeCopied": false
+    },
+    {
+      "path": "research/dense135-workflow-20261020/workflow/workers/circuit_body_core_guard.py",
+      "sha256": "188836040a30bee0582aa2afb3dc2c6c2e4da2bfc3bf589dbb934ef08dae0674",
+      "runtimeCopied": false
+    },
+    {
+      "path": "research/dense135-workflow-20261020/workflow/docs/验证摘要.md",
+      "sha256": "2dbb0060a1dcefa734d8f4535d2937afbfbca40f98d226df1bf7269d614ace96",
+      "runtimeCopied": false
+    }
+  ],
+  "scope": "Two pure geometry kernels and selected tests; no credentials, environments, history, third-party router or design-specific repair scripts."
+}

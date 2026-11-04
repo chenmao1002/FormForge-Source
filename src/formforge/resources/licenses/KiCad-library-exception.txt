@@ -1,0 +1,9 @@
+KiCad library authors / KiCad community
+Source: https://www.kicad.org/libraries/license/
+Base license: Creative Commons Attribution-ShareAlike 4.0 International
+
+KiCad libraries exception:
+To the extent that the creation of electronic designs that use 'Licensed Material' can be considered to be 'Adapted Material', then the copyright holder waives article 3 of the license with respect to these designs and any generated files which use data provided as part of the 'Licensed Material'.
+
+Redistributed library collections retain the base license and attribution.
+This file identifies the exception to the retained CC-BY-SA-4.0 legal code.

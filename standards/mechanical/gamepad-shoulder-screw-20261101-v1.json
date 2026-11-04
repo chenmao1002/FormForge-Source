@@ -1,0 +1,30 @@
+{
+  "kind": "hardware-catalog",
+  "version": 1,
+  "units": "mm",
+  "scope": "Project custom-machined shoulder screw procurement definition. Not a commercial catalog SKU, stock, manufacturing or load qualification.",
+  "parts": {
+    "ff-shoulder-m2-d3-s3p3-t5-v1": {
+      "kind": "screw",
+      "thread": "M2",
+      "pitch": 0.4,
+      "diameter": 2,
+      "length": 8.3,
+      "shoulderDiameter": 3,
+      "shoulderLength": 3.3,
+      "headDiameter": 5.5,
+      "headHeight": 1.8,
+      "driveSize": 1.5,
+      "driveDepth": 1.3,
+      "material": "Custom machined303stainless, passivated, shaft groundRa0.4; supplier material/process qualification required",
+      "source": "urn:formforge:gamepad-A:custom-shoulder-screw:20261101:v1",
+      "sourceProduct": "FF-SHOULDER-M2-D3-S3.3-T5-V1",
+      "shaftDiameterLimitsMm": [2.995,3.000],
+      "shoulderLengthToleranceMm": 0.02,
+      "headHeightToleranceMm": 0.03,
+      "threadLengthMm": 5,
+      "threadFit": "M2x0.4external6g, purchased-thread gauge acceptance; thread flanks are not represented in nominal CAD",
+      "assemblyIntent": "Shoulder end bears on CNC fixed support. POM ear3.00+/-0.03wide floats within3.30+/-0.02shoulder length, nominal0.30axial play. Head is a retention flange, not a clamp on the moving POM ear."
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "kind": "hardware-catalog",
+  "version": 1,
+  "units": "mm",
+  "scope": "Nominal sourced flat-point set screw. Drive-face datum z=0, positive Z toward pressure tip. No modeled thread or clamp-force/stock certification.",
+  "parts": {
+    "iso4026-m2x4-flat": {
+      "kind": "screw", "headless": true,
+      "thread": "M2", "diameter": 2, "pitch": 0.4, "length": 4,
+      "headDiameter": 2, "headHeight": 0,
+      "flatPointDiameter": 1, "pointChamferLength": 0.5,
+      "driveSize": 0.9, "driveDepth": 0.8,
+      "material": "A2 stainless steel",
+      "source": "https://www.accu.co.uk/flat-point-set-screws/250735-SSF-M2-4-A2-R360",
+      "sourceBasis": "Vendor dimensions read 2026-11-02: M2x4, pitch0.4, hex0.9, flatpoint1(+0/-0.25), drive-depth0.8..1.7, tip relief90deg. Nominal chamfer0.5 follows diameter2/flat1/90deg. Treatment compatibility, torque, exact tolerances and availability must be qualified separately. No threadlocking product is automatically selected."
+    }
+  }
+}

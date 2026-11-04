@@ -1,0 +1,9 @@
+{
+  "name": "formforge-procurement-browser",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Independent Playwright quotation validation for the existing FormForge service",
+  "main": "worker.cjs",
+  "scripts": {"start": "node worker.cjs", "test": "node --test tests/*.test.cjs"},
+  "dependencies": {"playwright": "1.64.1"}
+}

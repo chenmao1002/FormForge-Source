@@ -1,0 +1,28 @@
+{
+  "source": "C:/Windows/Fonts/NotoSansSC-VF.ttf",
+  "source_sha256": "763146584cf0710223441356b4395e279021b0806c196614377a7a0174ae074a",
+  "source_license": "SIL Open Font License 1.1",
+  "official_license_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanssc/OFL.txt",
+  "method": "fontTools.varLib.instancer at wght=400/700, updateFontNames=True; renamed derivative family to Product IDE 3D Sans SC; original copyright/license metadata retained.",
+  "fonts": [
+    {
+      "file": "ProductIDE3DSansSC-Regular.ttf",
+      "weight": 400,
+      "sha256": "97b1f3f9f8d19333b73c61c36d152a47355cec1ed08b3df270160c0ee9b0697e",
+      "bytes": 10596376
+    },
+    {
+      "file": "ProductIDE3DSansSC-Bold.ttf",
+      "weight": 700,
+      "sha256": "4bbb5cf83f1adcfef1af8b095154e3ef02ab7ab39428e7260da1399c92731838",
+      "bytes": 10585896
+    }
+  ],
+  "source_family": "Noto Sans SC",
+  "source_copyright": "Copyright 2014-2021 Adobe (http://www.adobe.com/), with Reserved Font Name 'Source'",
+  "development_fonttools_version": "4.65.0",
+  "license_file_sha256": "ea7155bae3d6079d0e3c9dba24bc8d447ec666877d695e33be8379e5091c152a",
+  "runtime_dependencies_for_font_rendering": [
+    "reportlab"
+  ]
+}

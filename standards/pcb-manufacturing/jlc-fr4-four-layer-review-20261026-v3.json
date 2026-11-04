@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "id": "jlc-fr4-four-layer-review-20261026-v3",
+  "status": "explicit-software-review-profile",
+  "process": "Software review target: FR4 four copper layers, nominal 1.6mm, 1oz outer-copper annular criterion, CNC outline, ordinary plated through holes; original physical stackup/copper weight not verified.",
+  "sources": [
+    {
+      "url": "https://www.jlc.com/portal/vtechnology.html",
+      "retrievedAt": "2026-10-26",
+      "sha256": "8f6b25da5269532dacae10e965992ac0a1e21ffdf59f5e1a584d2b0f0808e8de",
+      "bytes": 158512
+    },
+    {
+      "url": "https://www.jlc.com/portal/1/serviceGuide",
+      "retrievedAt": "2026-10-26",
+      "sha256": "9a18a07280b6c20ce2e42d8fe2f62984363a816f9de50d91efdfc8648e2a768b",
+      "bytes": 191125
+    },
+    {
+      "url": "https://jlcpcb.com/capabilities/pcb-capabilities/",
+      "retrievedAt": "2026-10-26",
+      "sha256": "dd962fb74ea64c04ea756dce4f9ff236971c6609879cc874a09a80c232dd7d13",
+      "bytes": 136443
+    },
+    {
+      "file": "jlcpcb-capabilities-20261026.html",
+      "url": "https://jlcpcb.com/capabilities/pcb-capabilities/",
+      "sha256": "08422ce1dc33ba06b1b3d43009f27b9e0c19aa53ef9768cba40877528de1f212",
+      "size": 136974
+    },
+    {
+      "file": "LAN8710A-DS00002164B.pdf",
+      "url": "https://ww1.microchip.com/downloads/en/DeviceDoc/00002164B.pdf",
+      "sha256": "0f4b8670bcfc7e6327e2053a22c892bea2f4e7722262a7e799a84dcdf17efa7d",
+      "size": 1283959
+    }
+  ],
+  "profileScope": "Explicit selected native software DFM constraints for an independent ESP32 review revision; not a complete factory rule deck, upstream process declaration or supplier acceptance.",
+  "facts": {
+    "cncCopperEdgeCapabilityMm": 0.2,
+    "cncCopperEdgeRecommendedMm": 0.3,
+    "npthToCopperMinimumMm": 0.2,
+    "viaHoleToCopperMinimumMm": 0.2,
+    "innerPthHoleToCopperMinimumMm": 0.3,
+    "pthAnnularMinimumMm": 0.18,
+    "pthAnnularRecommendedMm": 0.25,
+    "multilayer1OzPthAbsoluteAnnularMm": 0.15,
+    "multilayer1OzPthRecommendedAnnularMm": 0.2,
+    "componentLeadAuditFloorMm": 0.18
+  },
+  "inheritedSource": {
+    "minTrackWidthMm": 0.1524,
+    "minViaDiameterMm": 0.7,
+    "minViaDrillMm": 0.4,
+    "minHoleToHoleMm": 0.3048
+  },
+  "notes": [
+    "The original proposed profile and SHA remain retained; actual independent review derivations explicitly record which constraints changed from the modern template.",
+    "Original project MinViaDrill is via-only; ordinary vias remain at least 0.4mm and component PTH drills are represented separately.",
+    "The 0.25mm routed-edge policy is above the published 0.2mm CNC capability; the 0.3mm recommendation remains advisory, not an upstream 0.5mm source requirement.",
+    "Hole-to-copper stays 0.25mm; no severity or manufacturing-error exclusion is lowered to accept the repairs.",
+    "Material, copper weight, impedance, solder-mask and silk manufacturability, assembly access and supplier CAM review remain independent qualifications.",
+    "The primary capability table distinguishes multilayer 1oz PTH annular absolute minimum 0.15mm/recommended 0.20mm from the 2-layer 1oz 0.18mm/0.25mm figures; the actual non-thermal component-lead source lands are all at least 0.25mm.",
+    "Apply a 0.15mm native annular floor to every via/PTH, and enlarge all nine U4 exposed-pad thermal lands; no drill size or position is reduced to pass.",
+    "This is a selected review target, not a verified original laminate, copper weight, full supplier rule deck or manufacturing approval; native physical stackup is absent and remains unqualified."
+  ],
+  "version": 3,
+  "supersedes": {
+    "id": "jlc-fr4-four-layer-review-20261026-v2",
+    "sha256": "ffee7a7eb3ac008e71586887007025fa16aa057f2a2625ec2672608a62f22e3b"
+  },
+  "appliedNativeSettings": {
+    "minTrackWidthMm": 0.1524,
+    "minCopperClearanceMm": 0.1524,
+    "minViaDiameterMm": 0.7,
+    "minOrdinaryViaDrillMm": 0.4,
+    "minComponentThroughHoleDrillMm": 0.2,
+    "minHoleToHoleMm": 0.3048,
+    "minCopperEdgeMm": 0.25,
+    "minGenericHoleCopperMm": 0.25,
+    "minAnnularRingMm": 0.15,
+    "minThermalSpokes": 2,
+    "innerPthHoleCopperMm": 0.3
+  },
+  "exposedPadThermalHoleRole": {
+    "reference": "U4",
+    "pin": "33",
+    "datasheet": "Microchip DS00002164B, page 6 exposed VSS pad must be grounded",
+    "nativeHoleCount": 9,
+    "smallLandDiameterMm": 0.6,
+    "centralLandDiameterMm": 1.5,
+    "drillsAndPositionsUnchanged": true
+  },
+  "sourcePthRoleAudit": {
+    "componentLeadMinimumObservedMm": 0.25,
+    "ordinaryViaAnnularMm": 0.15,
+    "ordinaryViaCount": 219,
+    "exposedPadThermalHoleIds": [
+      "092bca71-741f-4a2b-b82a-c9cacce47570",
+      "5ae3e7e2-897d-481a-ab17-198a379976b0",
+      "78e8c548-5511-46d1-b488-373b43b885be",
+      "a4f31ebc-9f76-4386-8fe0-3627ae91c4ef",
+      "a818619e-434b-4bc1-bf97-fe48d0c14b54",
+      "c0038ed9-81a3-4595-86f0-af92dd96c3df",
+      "fdc324d9-b421-49c9-9852-414d1e01f67e",
+      "6dd4af8c-7530-4d13-b26d-4f3e6608f4b3",
+      "ba7bd38d-b0c4-4eca-bb74-2b6db39483b1"
+    ]
+  }
+}

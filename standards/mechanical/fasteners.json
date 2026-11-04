@@ -1,0 +1,57 @@
+{
+  "kind": "hardware-catalog",
+  "version": 1,
+  "units": "mm",
+  "scope": "Small source-backed nominal geometry library. Purchased parts, not printable threads or a stock/price assertion. Add other sizes/families with exact sources.",
+  "parts": {
+    "iso4762-m2x8": {
+      "kind": "screw",
+      "thread": "M2",
+      "diameter": 2,
+      "pitch": 0.4,
+      "length": 8,
+      "headDiameter": 3.8,
+      "headHeight": 2,
+      "driveSize": 1.5,
+      "material": "A2 stainless steel",
+      "source": "https://www.accu.co.uk/metric-cap-head-screws/3793-SSCF-M2-8-A2",
+      "driveDepth": 1
+    },
+    "din912-m2x10": {
+      "kind": "screw",
+      "thread": "M2",
+      "diameter": 2,
+      "pitch": 0.4,
+      "length": 10,
+      "headDiameter": 3.8,
+      "headHeight": 2,
+      "driveSize": 1.5,
+      "material": "A2 stainless steel",
+      "source": "https://www.fusionfixings.co.uk/products/m2-x-10mm-socket-cap-head-screw-a2-stainless-steel-din-912",
+      "driveDepth": 1
+    },
+    "iso4762-m2x25": {
+      "kind": "screw",
+      "thread": "M2",
+      "diameter": 2,
+      "pitch": 0.4,
+      "length": 25,
+      "headDiameter": 3.8,
+      "headHeight": 2,
+      "driveSize": 1.5,
+      "material": "A2 stainless steel",
+      "source": "https://www.accu.co.uk/metric-cap-head-screws/642170-SSCF-M2-25-A2-BL",
+      "driveDepth": 1
+    },
+    "din934-m2": {
+      "kind": "nut",
+      "thread": "M2",
+      "diameter": 2,
+      "pitch": 0.4,
+      "acrossFlats": 4,
+      "height": 1.6,
+      "material": "A2 stainless steel",
+      "source": "https://www.accu.co.uk/hexagon-nuts/7884-HPN-M2-A2"
+    }
+  }
+}

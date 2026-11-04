@@ -1,0 +1,116 @@
+{
+  "files": [
+    {
+      "sourceUri": "https://api.github.com/repos/STMicroelectronics/cmsis-device-g0/contents/Include/stm32g030xx.h?ref=f576c24e123edf3332988ecd49512c0f35f85186",
+      "repository": "STMicroelectronics/cmsis-device-g0",
+      "version": "v1.4.5",
+      "commit": "f576c24e123edf3332988ecd49512c0f35f85186",
+      "gitBlobSha": "ba40898b76cbaef5d6d6aee70aaea20cf991aecb",
+      "destination": "vendor/firmware/cmsis/stm32g030xx.h",
+      "sha256": "9af2b7c64ebe6cbe486f8a5672c7e6f2f08c23cd5d24962c138205b1a49b833b",
+      "size": 558733,
+      "license": "Apache-2.0; retained upstream license files"
+    },
+    {
+      "sourceUri": "https://api.github.com/repos/STMicroelectronics/cmsis-device-g0/contents/Include/system_stm32g0xx.h?ref=f576c24e123edf3332988ecd49512c0f35f85186",
+      "repository": "STMicroelectronics/cmsis-device-g0",
+      "version": "v1.4.5",
+      "commit": "f576c24e123edf3332988ecd49512c0f35f85186",
+      "gitBlobSha": "a1b094c71154f46e17c1fb9ad3e1e836e86f4204",
+      "destination": "vendor/firmware/cmsis/system_stm32g0xx.h",
+      "sha256": "20ee999e4431472a7c351e2412537aa0ef7f5f5e499a21a92c1d4cc21f84ebf1",
+      "size": 2227,
+      "license": "Apache-2.0; retained upstream license files"
+    },
+    {
+      "sourceUri": "https://api.github.com/repos/STMicroelectronics/cmsis-device-g0/contents/LICENSE.md?ref=f576c24e123edf3332988ecd49512c0f35f85186",
+      "repository": "STMicroelectronics/cmsis-device-g0",
+      "version": "v1.4.5",
+      "commit": "f576c24e123edf3332988ecd49512c0f35f85186",
+      "gitBlobSha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "destination": "vendor/firmware/cmsis/LICENSE-ST.md",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "size": 11357,
+      "license": "Apache-2.0; retained upstream license files"
+    },
+    {
+      "sourceUri": "https://api.github.com/repos/STMicroelectronics/cmsis-device-g0/contents/Release_Notes.html?ref=f576c24e123edf3332988ecd49512c0f35f85186",
+      "repository": "STMicroelectronics/cmsis-device-g0",
+      "version": "v1.4.5",
+      "commit": "f576c24e123edf3332988ecd49512c0f35f85186",
+      "gitBlobSha": "0909c47af409e761354067cd20962eef27c7df22",
+      "destination": "vendor/firmware/cmsis/Release_Notes-ST.html",
+      "sha256": "60bf21fae8d64907964344362845dd6ebaa7c6942b48739ef93bb9641f4695f8",
+      "size": 16592,
+      "license": "Apache-2.0; retained upstream license files"
+    },
+    {
+      "sourceUri": "https://api.github.com/repos/ARM-software/CMSIS_5/contents/CMSIS/Core/Include/core_cm0plus.h?ref=2b7495b8535bdcb306dac29b9ded4cfb679d7e5c",
+      "repository": "ARM-software/CMSIS_5",
+      "version": "5.9.0",
+      "commit": "2b7495b8535bdcb306dac29b9ded4cfb679d7e5c",
+      "gitBlobSha": "4e7179a6146cd573f32cb8d1d96546de43d92f97",
+      "destination": "vendor/firmware/cmsis/core_cm0plus.h",
+      "sha256": "a09fa9c6b8b21d1920bce15b98aa56182b027e9278cca0b154812bac2aea3cfa",
+      "size": 49877,
+      "license": "Apache-2.0; retained upstream license files"
+    },
+    {
+      "sourceUri": "https://api.github.com/repos/ARM-software/CMSIS_5/contents/CMSIS/Core/Include/cmsis_version.h?ref=2b7495b8535bdcb306dac29b9ded4cfb679d7e5c",
+      "repository": "ARM-software/CMSIS_5",
+      "version": "5.9.0",
+      "commit": "2b7495b8535bdcb306dac29b9ded4cfb679d7e5c",
+      "gitBlobSha": "8b4765f186efe577be5245b59c610056d3c54cbc",
+      "destination": "vendor/firmware/cmsis/cmsis_version.h",
+      "sha256": "184c19fd3ee73632edf35a0b4d49cd48be75fbf49e6ccb19d9db05fa83bea4b3",
+      "size": 1680,
+      "license": "Apache-2.0; retained upstream license files"
+    },
+    {
+      "sourceUri": "https://api.github.com/repos/ARM-software/CMSIS_5/contents/CMSIS/Core/Include/cmsis_compiler.h?ref=2b7495b8535bdcb306dac29b9ded4cfb679d7e5c",
+      "repository": "ARM-software/CMSIS_5",
+      "version": "5.9.0",
+      "commit": "2b7495b8535bdcb306dac29b9ded4cfb679d7e5c",
+      "gitBlobSha": "adbf296f15a47a93e5058abddad6742bb4b9854d",
+      "destination": "vendor/firmware/cmsis/cmsis_compiler.h",
+      "sha256": "b51963d271c1571ca3463654c76aa7ea50c4eac5d0a2710df10414ac64d9e0f8",
+      "size": 9481,
+      "license": "Apache-2.0; retained upstream license files"
+    },
+    {
+      "sourceUri": "https://api.github.com/repos/ARM-software/CMSIS_5/contents/CMSIS/Core/Include/cmsis_gcc.h?ref=2b7495b8535bdcb306dac29b9ded4cfb679d7e5c",
+      "repository": "ARM-software/CMSIS_5",
+      "version": "5.9.0",
+      "commit": "2b7495b8535bdcb306dac29b9ded4cfb679d7e5c",
+      "gitBlobSha": "67bda4ef3c38dadc4471129d39eb4e870dc08fc7",
+      "destination": "vendor/firmware/cmsis/cmsis_gcc.h",
+      "sha256": "43bfd1fe69fbbc2ca70aaf7d43cc3e20f16e0c7f66e1bdef9b51af6dc14b2617",
+      "size": 63374,
+      "license": "Apache-2.0; retained upstream license files"
+    },
+    {
+      "sourceUri": "https://api.github.com/repos/ARM-software/CMSIS_5/contents/CMSIS/Core/Include/mpu_armv7.h?ref=2b7495b8535bdcb306dac29b9ded4cfb679d7e5c",
+      "repository": "ARM-software/CMSIS_5",
+      "version": "5.9.0",
+      "commit": "2b7495b8535bdcb306dac29b9ded4cfb679d7e5c",
+      "gitBlobSha": "d9eedf81a64c381157c7cfff6f9acfb2309ddff5",
+      "destination": "vendor/firmware/cmsis/mpu_armv7.h",
+      "sha256": "29206b52ee02290ed6f5a5415ebd4187de802cf176d9b3cb844390d8e5571372",
+      "size": 11731,
+      "license": "Apache-2.0; retained upstream license files"
+    },
+    {
+      "sourceUri": "https://api.github.com/repos/ARM-software/CMSIS_5/contents/LICENSE.txt?ref=2b7495b8535bdcb306dac29b9ded4cfb679d7e5c",
+      "repository": "ARM-software/CMSIS_5",
+      "version": "5.9.0",
+      "commit": "2b7495b8535bdcb306dac29b9ded4cfb679d7e5c",
+      "gitBlobSha": "8dada3edaf50dbc082c9a125058f25def75e625a",
+      "destination": "vendor/firmware/cmsis/LICENSE-ARM.txt",
+      "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1",
+      "size": 11357,
+      "license": "Apache-2.0; retained upstream license files"
+    }
+  ],
+  "downloadNote": "raw.githubusercontent.com TLS failed; downloaded identical commit-pinned bytes from official GitHub Contents API and verified Git blob SHA1 plus recorded SHA256.",
+  "scope": "Minimum GCC Cortex-M0+ STM32G030 header closure and licenses; not HAL"
+}

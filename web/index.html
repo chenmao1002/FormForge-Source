@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light" />
+  <meta name="description" content="FormForge 本地产品工程工作台" />
+  <title>FormForge · 产品工程工作台</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%2319735a' d='M3 3h18v5H9v4h10v5H9v6H3z'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="/web/style.css?v=0.23.15" />
+  <link rel="stylesheet" href="/web/revisions.css?v=0.23.15" />
+  <link rel="stylesheet" href="/web/orders.css?v=0.23.15" />
+  <link rel="stylesheet" href="/web/workspace.css?v=20261024.17" />
+  <link rel="stylesheet" href="/web/settings.css?v=0.27.0-confirm1" />
+  <link rel="stylesheet" href="/web/mechanical.css?v=editing-v1" />
+  <script type="module" src="/web/assets/app.js?v=20261104-pcb-defaults"></script>
+  <link rel="stylesheet" href="/web/overview.css?v=20261025.1" />
+  <link rel="stylesheet" href="/web/schematic.css?v=20261102-native-schematic-preview" />
+  <link rel="stylesheet" href="/web/modules.css?v=20261027.1" />
+  <link rel="stylesheet" href="/web/pcb.css?v=20261026.2" />
+  <link rel="stylesheet" href="/web/mechanical-workspace.css?v=20261026.1" />
+  <link rel="stylesheet" href="/web/firmware-workspace.css?v=20261026.1" />
+  <link rel="stylesheet" href="/web/manufacturing-workspace.css?v=20261026.1" />
+  <link rel="stylesheet" href="/web/project-transition.css?v=20261026.1" />
+  <link rel="stylesheet" href="/web/clarity.css?v=20261027.2" />
+</head>
+<body>
+  <svg class="icon-defs" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+      <symbol id="i-overview" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.5"/></symbol>
+      <symbol id="i-sources" viewBox="0 0 24 24"><path d="M14 3H6.5A1.5 1.5 0 0 0 5 4.5v15A1.5 1.5 0 0 0 6.5 21h11a1.5 1.5 0 0 0 1.5-1.5V8z"/><path d="M14 3v5h5M8.5 12h7M8.5 16h7"/></symbol>
+      <symbol id="i-components" viewBox="0 0 24 24"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M9 1.5v3M15 1.5v3M9 19.5v3M15 19.5v3M1.5 9h3M1.5 15h3M19.5 9h3M19.5 15h3M10.5 10.5h3v3h-3z"/></symbol>
+      <symbol id="i-schematic" viewBox="0 0 24 24"><circle cx="5" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="12" cy="19" r="2"/><path d="M7 5h10M5 7v4l7 6M19 7v4l-7 6"/></symbol>
+      <symbol id="i-pcb" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8" cy="8" r="1.5"/><circle cx="16" cy="16" r="1.5"/><path d="M9.5 8H14a2 2 0 0 1 2 2v4.5M8 9.5V13a3 3 0 0 0 3 3h3.5"/></symbol>
+      <symbol id="i-mechanical" viewBox="0 0 24 24"><path d="m12 2.5 8 4.5v10l-8 4.5L4 17V7zM4 7l8 4.5L20 7M12 11.5v10M8 4.8l8 4.5"/></symbol>
+      <symbol id="i-firmware" viewBox="0 0 24 24"><path d="m8 6-5 6 5 6M16 6l5 6-5 6M14 3l-4 18"/></symbol>
+      <symbol id="i-manufacturing" viewBox="0 0 24 24"><path d="M3 21V9l6 3V8l6 4V4h4a2 2 0 0 1 2 2v15zM7 16h2M12 16h2M17 16h2"/></symbol>
+      <symbol id="i-settings" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06-2.83 2.83-.06-.06A1.7 1.7 0 0 0 15 19.4a1.7 1.7 0 0 0-1 .6 1.7 1.7 0 0 0-.4 1.1V21h-4v-.09A1.7 1.7 0 0 0 8.6 19.4a1.7 1.7 0 0 0-1.88.34l-.06.06-2.83-2.83.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-1.6-1H3v-4h.09A1.7 1.7 0 0 0 4.6 9a1.7 1.7 0 0 0-.34-1.88l-.06-.06 2.83-2.83.06.06A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1-1.6V3h4v.09A1.7 1.7 0 0 0 15 4.6a1.7 1.7 0 0 0 1.88-.34l.06-.06 2.83 2.83-.06.06A1.7 1.7 0 0 0 19.4 9a1.7 1.7 0 0 0 1.6 1h.09v4H21a1.7 1.7 0 0 0-1.6 1z"/></symbol>
+      <symbol id="i-revision" viewBox="0 0 24 24"><path d="M4 7v5h5M20 17v-5h-5"/><path d="M6.1 16a7 7 0 0 0 11.8-2M17.9 8A7 7 0 0 0 6.1 10"/></symbol>
+      <symbol id="i-task" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></symbol>
+      <symbol id="i-artifact" viewBox="0 0 24 24"><path d="M4 7.5 12 3l8 4.5v9L12 21l-8-4.5zM4 7.5l8 4.5 8-4.5M12 12v9"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    </defs>
+  </svg>
+  <a class="skip-link" href="#workspace">跳到工作区</a>
+  <button id="sidebar-backdrop" class="sidebar-backdrop" aria-label="关闭导航" hidden></button>
+  <aside id="sidebar" class="sidebar" aria-label="工作空间导航">
+    <a class="brand" href="/" aria-label="FormForge 首页"><span class="brand-mark"><i></i><i></i><i></i></span><span>FormForge</span></a>
+    <div id="new-project-slot"><button id="new-project" class="new-project"><span aria-hidden="true"><svg><use href="#i-plus"/></svg></span> 新建工程</button></div>
+
+    <button class="nav-item active" data-view="overview" aria-current="page"><span class="nav-icon" aria-hidden="true"><svg><use href="#i-overview"/></svg></span>工程概览</button>
+    <button class="nav-item" data-view="sources"><span class="nav-icon" aria-hidden="true"><svg><use href="#i-sources"/></svg></span>工程资料</button>
+    <div class="nav-divider" aria-hidden="true"></div>
+    <div class="design-navigation">
+    <button class="nav-item" data-view="schematic"><span class="nav-icon" aria-hidden="true"><svg><use href="#i-schematic"/></svg></span>原理图<span class="nav-dot"></span></button>
+    <button class="nav-item" data-view="pcb"><span class="nav-icon" aria-hidden="true"><svg><use href="#i-pcb"/></svg></span>PCB<span class="nav-dot"></span></button>
+    <button class="nav-item" data-view="mechanical"><span class="nav-icon" aria-hidden="true"><svg><use href="#i-mechanical"/></svg></span>机械设计<span class="nav-dot"></span></button>
+    <button class="nav-item" data-view="firmware"><span class="nav-icon" aria-hidden="true"><svg><use href="#i-firmware"/></svg></span>固件<span class="nav-dot"></span></button>
+    <button class="nav-item" data-view="manufacturing"><span class="nav-icon" aria-hidden="true"><svg><use href="#i-manufacturing"/></svg></span>制造<span class="nav-dot"></span></button>
+    </div>
+    <div class="nav-label project-label">我的工程 <span id="project-total"></span></div>
+    <div class="project-search"><input id="project-search" type="search" aria-label="搜索工程" placeholder="搜索工程…" autocomplete="off" /></div>
+    <div id="project-list" class="project-list"></div>
+    <p id="project-search-empty" class="project-search-empty" role="status" hidden>没有找到工程，试试其他名称。</p>
+    <button class="nav-item settings-nav" data-view="settings"><span class="nav-icon" aria-hidden="true"><svg><use href="#i-settings"/></svg></span>设置</button>
+  </aside>
+
+  <main id="workspace" tabindex="-1">
+    <section id="project-transition" class="project-transition" role="status" aria-live="polite" hidden>
+      <div class="project-transition-card"><span class="project-loading-mark" aria-hidden="true">◇</span><h2 id="project-transition-title">正在切换工程…</h2><p id="project-transition-name" translate="no"></p><p id="project-transition-detail">正在读取工程内容与预览，请稍候。</p><button id="project-transition-retry" class="button primary" hidden>重试加载</button></div>
+    </section>
+    <header class="topbar"><button id="sidebar-toggle" class="icon-button mobile-menu" aria-label="打开工程导航" aria-controls="sidebar" aria-expanded="false">☰</button><div class="breadcrumb">工作空间 <span>/</span> <strong id="project-name" translate="no">—</strong></div><div class="topbar-right"><label class="language-control"><span>界面语言</span><select id="language-switch" aria-label="界面语言"><option value="zh-CN">中文</option><option value="en">English</option></select></label><span id="connection-status" class="connection" role="status">连接中</span><button id="inspector-toggle" class="button secondary" aria-controls="workspace-inspector" aria-pressed="true" title="显示或收起需求与偏好">收起侧栏</button></div></header>
+    <div class="page-heading"><div class="heading-identity"><span class="heading-emblem"><svg class="" aria-hidden="true"><use id="view-icon" href="#i-overview"/></svg></span><div><h1 id="view-title">工程概览</h1></div></div><div class="heading-actions"><button id="package-import-button" class="button secondary"><svg class="" aria-hidden="true"><use href="#i-sources"/></svg>导入工程包</button><button id="project-export-button" class="button secondary" disabled><svg class="" aria-hidden="true"><use href="#i-artifact"/></svg>导出工程</button><button id="import-button" class="button secondary" disabled><svg class="" aria-hidden="true"><use href="#i-pcb"/></svg>导入 KiCad 工程</button><button id="inspect-button" class="button primary" disabled><svg class="" aria-hidden="true"><use href="#i-revision"/></svg> 运行检查</button></div></div>
+    <nav id="schematic-navigation" class="schematic-navigation" role="tablist" aria-label="原理图工作区" hidden><button role="tab" data-schematic-tab="preview" aria-selected="false"><svg aria-hidden="true"><use href="#i-schematic"/></svg>原理图</button><button role="tab" data-schematic-tab="layout" aria-selected="false"><svg aria-hidden="true"><use href="#i-revision"/></svg>排版候选</button><button role="tab" data-schematic-tab="checks" aria-selected="false"><svg aria-hidden="true"><use href="#i-task"/></svg>设计检查</button><button role="tab" data-schematic-tab="libraries" aria-selected="false"><svg aria-hidden="true"><use href="#i-components"/></svg>器件与库</button><button role="tab" data-schematic-tab="history" aria-selected="false"><svg aria-hidden="true"><use href="#i-clock"/></svg>版本历史</button><button role="tab" data-schematic-tab="files" aria-selected="false"><svg aria-hidden="true"><use href="#i-sources"/></svg>相关文件</button></nav>
+    <div class="content-layout">
+      <section class="main-column">
+        <div id="settings-panel" class="view-panel settings-panel" hidden></div>
+        <div id="overview" class="view-panel">
+          <div id="welcome" class="welcome-card"><h2>新建工程</h2><div id="welcome-action"></div></div>
+          <div id="project-overview" hidden>
+            <div class="project-intro"><div><h2 id="overview-project-name" translate="no"></h2></div><div class="project-intro-actions"><button id="rename-project" class="button secondary" disabled>修改名称</button><button id="delete-project" class="button maintenance-danger" disabled>删除工程</button></div></div>
+            <div class="stats"><article class="stat-card stat-revisions"><span class="stat-icon"><svg class="" aria-hidden="true"><use href="#i-revision"/></svg></span><div class="stat-content"><div class="stat-label" title="含未采纳候选">修订与候选</div><strong id="stat-revisions">00</strong></div></article><article class="stat-card stat-jobs"><span class="stat-icon"><svg class="" aria-hidden="true"><use href="#i-task"/></svg></span><div class="stat-content"><div class="stat-label">任务记录</div><strong id="stat-jobs">00</strong></div></article><article class="stat-card stat-artifacts"><span class="stat-icon"><svg class="" aria-hidden="true"><use href="#i-sources"/></svg></span><div class="stat-content"><div class="stat-label">工程产物</div><strong id="stat-artifacts">00</strong></div></article><article class="stat-card stat-updated"><span class="stat-icon"><svg class="" aria-hidden="true"><use href="#i-clock"/></svg></span><div class="stat-content"><div class="stat-label">最近更新</div><strong id="stat-updated">—</strong></div></article></div>
+            <div id="overview-context"></div>
+            <article id="product-concepts" class="card" aria-label="参考调研与概念方案" hidden></article>
+            <article class="card check-card"><div class="card-heading"><div><h2><svg class="section-icon" aria-hidden="true"><use href="#i-task"/></svg>检查结果</h2></div><span id="check-badge" class="small-tag">等待检查</span></div><div id="check-summary" class="check-summary">导入工程后运行 KiCad 10 原生检查。</div></article>
+            <article class="card"><div class="card-heading"><h2>设计修订与候选</h2><span id="revision-count" class="small-tag">0 份修订</span></div><div id="revision-list"></div><details id="revision-history" class="revision-history" hidden><summary id="revision-history-label">查看更早修订</summary><div id="revision-history-list"></div></details></article>
+          </div>
+        </div>
+        <article id="sources-panel" class="card view-panel" hidden><div class="card-heading"><span id="source-count" class="small-tag">0 份资料</span><button id="source-add" class="button primary">添加资料</button></div><p class="quiet-note">登记保存原始文件和来源。具体用途由对应设计任务检查，登记不代表供应商认证或工程验收。</p><div id="source-list" class="source-list"></div><div class="source-pagination"><button id="source-previous" class="button secondary">上一页</button><span id="source-page"></span><button id="source-next" class="button secondary">下一页</button></div></article>
+        <article id="mechanical-parameters" class="card view-panel" hidden></article>
+        <article id="revision-card" class="card revision-card" hidden>
+          <div class="revision-controls"><label for="preview-revision">查看版本</label><select id="preview-revision" aria-label="查看版本"></select><button id="follow-revision" class="text-button">跟随当前版本</button><button id="mechanical-manufacturing" class="text-button" hidden>打开结构件制造</button></div>
+          <article id="mechanical-overview" class="view-panel design-metadata" hidden><div class="mechanical-metrics"><div><span>装配零件</span><strong id="mechanical-part-count">—</strong></div><div><span>原生实体</span><strong id="mechanical-solid-count">—</strong></div><div><span>制作材料</span><strong id="mechanical-process">—</strong></div></div><p id="mechanical-overview-note" class="field-note"></p></article>
+          <article id="schematic-overview" class="schematic-overview design-metadata" hidden><div class="schematic-metrics"><div class="schematic-file-identity"><svg aria-hidden="true"><use href="#i-sources"/></svg><div><strong id="schematic-file" translate="no">—</strong><small id="schematic-file-meta"></small></div></div><div class="schematic-metric metric-files"><svg aria-hidden="true"><use href="#i-sources"/></svg><div><span>原理图文件</span><strong id="schematic-files">—</strong></div></div><div class="schematic-metric metric-symbols"><svg aria-hidden="true"><use href="#i-components"/></svg><div><span>器件数量</span><strong id="schematic-symbols">—</strong></div></div><div class="schematic-metric metric-nets"><svg aria-hidden="true"><use href="#i-schematic"/></svg><div><span>连接分组</span><strong id="schematic-nets">—</strong></div></div><div class="schematic-metric metric-pages"><svg aria-hidden="true"><use href="#i-artifact"/></svg><div><span>图页数量</span><strong id="schematic-pages">—</strong></div></div></div><p id="schematic-net-note" class="field-note"></p></article>
+          <article id="pcb-overview" class="pcb-overview design-metadata" hidden>
+          <div class="schematic-metrics pcb-metrics">
+            <div class="schematic-file-identity"><svg aria-hidden="true"><use href="#i-pcb"/></svg><div><strong id="pcb-file" translate="no">—</strong><small id="pcb-file-meta"></small></div></div>
+            <div class="schematic-metric metric-symbols"><svg aria-hidden="true"><use href="#i-components"/></svg><div><span>焊盘数量</span><strong id="pcb-pads">—</strong></div></div>
+            <div class="schematic-metric metric-files"><svg aria-hidden="true"><use href="#i-pcb"/></svg><div><span>过孔数量</span><strong id="pcb-vias">—</strong></div></div>
+            <div class="schematic-metric metric-pages"><svg aria-hidden="true"><use href="#i-artifact"/></svg><div><span>铜层数量</span><strong id="pcb-layers">—</strong></div></div>
+            <div class="schematic-metric metric-nets"><svg aria-hidden="true"><use href="#i-schematic"/></svg><div><span>最小走线宽度</span><strong id="pcb-width">—</strong></div></div>
+          </div><p id="pcb-summary-note" class="field-note"></p><div id="pcb-planning-panel"></div>
+        </article>
+          <div class="revision-summary"><strong id="revision-state"></strong><span id="revision-message"></span><a id="native-download" class="text-button" hidden>下载原生工程 ↗</a></div>
+          <p id="revision-checks" class="field-note"></p>
+          <details id="revision-evidence"><summary>检查与版本详情</summary>
+          <article id="schematic-check-card" class="schematic-check-section" hidden><div class="card-heading"><h2>检查结果</h2><span id="schematic-erc-status" class="badge neutral"></span></div><p id="schematic-check-version" class="card-subtitle"></p><div class="schematic-erc-counts"><div class="erc-errors"><span>错误</span><strong id="schematic-errors">—</strong></div><div class="erc-warnings"><span>警告</span><strong id="schematic-warnings">—</strong></div></div><div id="schematic-check-items"></div><p class="field-note">仅显示所选版本的原理图 ERC；PCB 检查见 PCB 工作区。</p><div class="schematic-check-actions"><a id="schematic-erc-report" class="text-button" hidden>下载 ERC 报告 ↗</a></div></article>
+          <div id="revision-findings" class="revision-findings"></div>
+          <details class="revision-detail-disclosure"><summary>修改明细与几何依据</summary><div id="revision-changes" class="revision-changes"></div></details>
+          <details id="engineering-review" hidden><summary id="engineering-review-title">电气约束审查与 PCB 交接</summary><div id="engineering-review-content"></div></details>
+          <details id="connection-details" hidden><summary>预期连接与检查结果</summary><div id="connection-content"></div></details>
+          <details id="library-details" hidden><summary id="library-summary">外部符号库</summary><div id="library-content"></div></details>
+          <details id="design-specification" hidden><summary>本版设计依据与已确认规格</summary><div id="design-specification-content"></div></details>
+          </details>
+          <div id="document-downloads" class="document-downloads"></div>
+        </article>
+        <article id="firmware-panel" class="card view-panel firmware-panel" hidden></article>
+        <article id="manufacturing-overview" class="card view-panel" hidden></article>
+        <nav id="manufacturing-tabs" class="card view-panel manufacturing-tabs" role="tablist" aria-label="制造工作区" hidden><button role="tab" data-manufacturing-tab="overview" aria-selected="false">制造总览</button><button role="tab" data-manufacturing-tab="native" aria-selected="false">从设计导出</button><button role="tab" data-manufacturing-tab="external" aria-selected="false">外部文件审核</button><button role="tab" data-manufacturing-tab="procurement" aria-selected="false">采购计划</button><button role="tab" data-manufacturing-tab="orders" aria-selected="false">平台订单</button><button role="tab" data-manufacturing-tab="supplier" aria-selected="false">下单执行</button><button role="tab" data-manufacturing-tab="structural" aria-selected="false">结构件</button><button role="tab" data-manufacturing-tab="structural-quotes" aria-selected="false">结构报价</button><button role="tab" data-manufacturing-tab="jlc" aria-selected="false">官方接口</button></nav>
+        <article id="manufacturing-panel" class="card view-panel manufacturing-panel" hidden></article>
+        <article id="external-manufacturing-panel" class="card view-panel manufacturing-panel" hidden></article>
+        <article id="supplier-panel" class="card view-panel manufacturing-panel" hidden></article>
+        <article id="orders-panel" class="card view-panel manufacturing-panel" hidden></article>
+        <article id="structural-panel" class="card view-panel manufacturing-panel" hidden></article>
+        <article id="structural-quotes-panel" class="card view-panel manufacturing-panel" hidden></article>
+        <article id="jlc-panel" class="card view-panel manufacturing-panel" hidden></article>
+        <article id="procurement-panel" class="card view-panel procurement-panel manufacturing-panel" hidden></article>
+        <article id="schematic-candidates" class="card" hidden></article>
+        <article id="schematic-extra" class="card" hidden></article>
+        <div id="viewer-panel" class="view-panel" hidden>
+          <div id="mechanical-view-heading" class="mechanical-view-heading" hidden><div><h2>渲染预览</h2></div><div class="mechanical-camera-tools"><button data-model-camera="iso" aria-pressed="true">立体</button><button data-model-camera="top" aria-pressed="false">俯视</button><button data-model-camera="front" aria-pressed="false">正视</button><button data-model-camera="side" aria-pressed="false">侧视</button><button id="mechanical-clay" aria-pressed="false">灰模检查</button><button id="mechanical-wireframe" aria-pressed="false">网格线框</button><button id="mechanical-image">导出图片</button></div></div>
+          <nav id="pcb-view-tabs" class="pcb-view-tabs" role="tablist" aria-label="PCB 视图" hidden><button role="tab" data-pcb-view="2d" aria-selected="true">2D 板图</button><button role="tab" data-pcb-view="3d" aria-selected="false">3D 渲染</button></nav>
+          <div class="viewer-toolbar"><div id="pcb-layer-toolbar" hidden></div><select id="artifact-select" aria-label="选择图页或模型"></select><div class="viewer-tools"><button id="drawing-expand" aria-pressed="false" hidden>展开图纸</button><button id="pcb-fullscreen" aria-pressed="false" hidden>展开全屏</button><button id="zoom-out" title="缩小" aria-label="缩小">−</button><button id="zoom-reset" title="适应视图">适应</button><button id="zoom-in" title="放大" aria-label="放大">＋</button><a id="download-artifact" class="download-link" href="#">下载 ↗</a></div></div>
+          <div id="mechanical-controls" class="mechanical-controls" hidden><div class="explode-control"><label for="explode">爆炸查看</label><input id="explode" type="range" min="0" max="2" step="0.05" value="0" /><output id="explode-value" for="explode">装配姿态</output></div><div class="mechanical-parts-heading"><strong>显示设置</strong><div><button id="mechanical-show-all" class="text-button" type="button">全部显示</button><button id="mechanical-hide-all" class="text-button" type="button">全部隐藏</button></div></div><input id="mechanical-part-search" type="search" placeholder="搜索零件…" aria-label="搜索零件" /><div id="part-list" class="part-list" aria-label="零件可见性"></div></div>
+          <div id="canvas" class="canvas"><div id="viewer-empty" class="viewer-empty"><span>◇</span><h2>还没有可显示的图纸</h2><p>导入工程并运行检查后，实际产物将显示在这里。</p></div><div id="image-stage" class="image-stage" hidden><img id="preview-image" alt="KiCad 原生图纸预览" draggable="false" /></div><div id="model-stage" class="model-stage" hidden></div></div>
+          <div class="viewer-footer"><span id="viewer-caption">原生工程预览</span><span id="viewer-help">拖动平移 · 滚轮缩放</span></div>
+        </div>
+        <div id="planned-panel" class="view-panel card planned-panel" hidden><span class="planned-symbol">◇</span><h2 id="planned-title"></h2><p id="planned-description"></p><div class="small-tag">尚未提供执行能力</div></div>
+        <article id="task-card" class="card task-card"><div class="card-heading"><div><h2>任务与过程</h2></div><label id="manufacturing-task-filter" hidden><input id="manufacturing-only-tasks" type="checkbox" checked />仅显示制造任务</label><span id="live-status" class="live-label"><i></i><span id="live-label-text">等待连接</span></span></div><div id="job-list" class="job-list"><div class="empty-small">暂无任务</div></div><details id="activity-history"><summary>最近变化</summary><div id="activity-list" class="activity-list"><p class="empty-small">暂无变化</p></div></details></article>
+      </section>
+      <aside id="workspace-inspector" class="inspector" aria-label="需求与偏好">
+        <article id="project-context-card" class="card preference-card"><div class="card-heading"><h2>需求与偏好</h2><span id="context-version" class="small-tag">—</span></div><label for="requirements">产品需求</label><textarea id="requirements" placeholder="例如：USB 转 RS422 模块，需要 USB 与九针 D-sub 接头。" disabled></textarea><label for="preferences">设计偏好</label><textarea id="preferences" placeholder="例如：安装结构优先用 M2.5，下载接口偏好 1.25 mm 间距。" disabled></textarea><details id="project-record-details"><summary>工程信息</summary><dl class="project-facts"><div><dt>项目描述</dt><dd id="info-description" translate="no"></dd></div><div><dt>设计模块</dt><dd id="info-modules"></dd></div></dl></details><div id="effective-preferences" class="effective-preferences" hidden></div><div id="draft-notice" class="draft-notice"></div><button id="save-context" class="button secondary full" disabled>保存需求和偏好</button></article>
+        <article id="agent-workflow" class="card agent-workflow" aria-label="设计与使用检查" hidden></article>
+      </aside>
+    </div>
+    <footer class="page-footer"><span>FORMFORGE <b id="app-version">读取中</b></span></footer>
+  </main>
+
+  <dialog id="project-dialog"><form id="project-form"><div class="dialog-heading"><div><h2>创建工程</h2></div><button type="button" class="close-dialog" aria-label="关闭">×</button></div><label for="new-name">工程名称</label><input id="new-name" name="name" required maxlength="120" placeholder="例如：USB 转 RS422 模块" /><label for="new-description">产品需求</label><textarea id="new-description" name="description" placeholder="写下你希望产品完成的功能。"></textarea><div class="dialog-actions"><button type="button" class="button secondary close-dialog">取消</button><button type="submit" class="button primary">创建工程</button></div></form></dialog>
+  <dialog id="rename-project-dialog"><form id="rename-project-form"><div class="dialog-heading"><h2>修改工程名称</h2><button type="button" class="close-dialog" aria-label="关闭">×</button></div><label for="rename-project-name">工程名称</label><input id="rename-project-name" required maxlength="120" /><div class="dialog-actions"><button type="button" class="button secondary close-dialog">取消</button><button type="submit" class="button primary">保存名称</button></div></form></dialog>
+  <dialog id="package-import-dialog"><form id="package-import-form"><div class="dialog-heading"><div><h2>导入工程包</h2></div><button type="button" class="close-dialog" aria-label="关闭">×</button></div><p class="dialog-description">校验工程包清单和全部文件 SHA-256，然后导入为新的本机工程。原工程与包文件保持不变。</p><label for="package-path">本机工程包路径</label><input id="package-path" required maxlength="2000" placeholder="C:\Projects\backup.formforge.zip" /><label for="package-project-name">新工程名称 <small>留空则保留原名称</small></label><input id="package-project-name" maxlength="120" placeholder="可选" /><p class="field-note">保留修订、任务时钟、失败记录、来源、产物和订单历史；不导入 API 令牌、供应商凭据、浏览器登录态或请求重放授权。历史检查仍绑定原版本，本机环境及后续修改需重新检查。</p><div class="dialog-actions"><button type="button" class="button secondary close-dialog">取消</button><button type="submit" class="button primary">校验并导入</button></div></form></dialog>
+  <dialog id="import-dialog"><form id="import-form"><div class="dialog-heading"><div><h2>导入已有工程</h2></div><button type="button" class="close-dialog" aria-label="关闭">×</button></div><p class="dialog-description">复制所需图纸与依赖，建立新的输入快照。原工程保持不变。</p><label for="source-dir">本机工程目录</label><input id="source-dir" required placeholder="C:\Projects\MyProject" /><label for="schematic-entry">原理图入口 <small>相对于上述目录</small></label><input id="schematic-entry" placeholder="project.kicad_sch（可选）" /><label for="board-entry">PCB 入口 <small>相对于上述目录</small></label><input id="board-entry" placeholder="project.kicad_pcb（可选）" /><p class="field-note">至少填写一个入口。层级图纸、自定义库和本地模型应一并放在工程目录内。</p><div class="dialog-actions"><button type="button" class="button secondary close-dialog">取消</button><button type="submit" class="button primary">导入工程</button></div></form></dialog>
+  <dialog id="inspect-dialog"><form id="inspect-form"><div class="dialog-heading"><div><h2>运行工程检查</h2></div><button type="button" class="close-dialog" aria-label="关闭">×</button></div><label for="inspect-revision">输入版本</label><select id="inspect-revision" required></select><label class="checkbox-label"><input type="checkbox" id="include-3d" /> 同时生成 PCB 板体 3D 预览</label><p class="field-note">板体预览不包含元件与外壳。检查会保留原生报告，并明确显示发现的问题。</p><label for="timeout">时间预算（秒）</label><input id="timeout" type="number" min="15" max="900" value="180" /><div class="dialog-actions"><button type="button" class="button secondary close-dialog">取消</button><button type="submit" class="button primary">开始检查</button></div></form></dialog>
+  <dialog id="source-dialog"><form id="source-form"><div class="dialog-heading"><div><h2>添加工程资料</h2></div><button type="button" class="source-close" aria-label="关闭资料窗口">×</button></div><p id="source-project" class="dialog-description"></p><label for="source-file">原始文件</label><input id="source-file" type="file" required /><label for="source-origin">资料类型</label><select id="source-origin"><option value="project-authored">本项目编写</option><option value="supplier-declared">供应商资料（声明）</option><option value="third-party-declared">第三方资料（声明）</option></select><label for="source-uri">来源地址</label><input id="source-uri" required maxlength="2000" value="formforge:project-document" placeholder="官网链接或项目资料地址" /><label for="source-version">资料版本</label><input id="source-version" required maxlength="200" placeholder="例如：Rev. E / 项目规格 v1" /><label for="source-license">许可或使用说明</label><input id="source-license" required maxlength="1000" placeholder="例如：项目自行编写 / 供应商公开手册" /><label for="source-note">内容与用途</label><textarea id="source-note" required maxlength="2000" placeholder="说明文件来自哪里、用于什么检查。"></textarea><p class="field-note">每份文件最多64MiB。保存后不覆盖原资料，更新内容请另登记新版本。</p><p id="source-progress" role="status" class="field-note"></p><div class="dialog-actions"><button type="button" class="button secondary source-close">取消</button><button id="source-submit" type="submit" class="button primary">登记资料</button></div></form></dialog>
+  <dialog id="connection-dialog"><div class="dialog-heading"><div><h2>连接你的 Agent</h2></div><button class="close-dialog" aria-label="关闭">×</button></div><p class="dialog-description">支持访问本机的 MCP 客户端。Agent 与网页操作同一份工程。</p><label>MCP 地址</label><code id="mcp-endpoint"></code><label>连接方式</label><p>Streamable HTTP · Bearer 认证</p><label>令牌文件</label><code>.local/api-token.txt</code><p class="field-note">令牌位于 FormForge 项目目录。只将它填写在客户端连接设置中。已验证的协议版本和能力范围见项目开发记录。</p><div class="dialog-actions"><button class="button primary close-dialog">知道了</button></div></dialog>
+  <div id="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>

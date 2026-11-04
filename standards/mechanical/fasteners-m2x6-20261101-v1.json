@@ -1,0 +1,23 @@
+{
+  "kind": "hardware-catalog",
+  "version": 1,
+  "units": "mm",
+  "scope": "Manufacturer nominal DIN912/ISO4762 M2x6 geometry, not stock/price or strength qualification. Existing catalog files are unchanged.",
+  "parts": {
+    "iso4762-m2x6": {
+      "kind": "screw",
+      "thread": "M2",
+      "diameter": 2,
+      "pitch": 0.4,
+      "length": 6,
+      "headDiameter": 3.8,
+      "headHeight": 2,
+      "driveSize": 1.5,
+      "driveDepth": 1,
+      "material": "A2 stainless steel",
+      "source": "https://www.accu.co.uk/api/product-datasheet?id=3792",
+      "sourceProduct": "SSCF-M2-6-A2",
+      "sourceScope": "Official manufacturer sheet accessed2026-11-01. Product page lists discontinued/out-of-stock/custom-order states; no current availability claimed."
+    }
+  }
+}

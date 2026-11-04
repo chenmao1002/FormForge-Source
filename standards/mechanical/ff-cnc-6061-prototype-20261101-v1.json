@@ -1,0 +1,21 @@
+{
+  "kind": "process-profile",
+  "id": "ff-cnc-6061-prototype-20261101-v1",
+  "version": 1,
+  "provider": "project-prototype-contract",
+  "process": "CNC",
+  "materials": ["6061-T6"],
+  "units": "mm",
+  "reviewedAt": "2026-11-01",
+  "sources": [{"url": "urn:formforge:gamepad-A:cnc-prototype-working-contract-v1", "use": "Project-authored prototype working limits for machined6061-T6 parts. No supplier capability, quote, dimensional guarantee or load approval is claimed."}],
+  "wallByMaxPartSpan": [[1000, 1.0]],
+  "featureWallMin": 0.6,
+  "featureWallBasis": "Declared local machined metal ledges only. Thin machined stop is separately braced; strength, chatter, tool access and dimensional inspection remain required. Not an SLA guideline.",
+  "staticGapMin": 0.1,
+  "movingGapMin": 0.025,
+  "clearanceConvention": "Nominal one-sided gap. Small bearing gaps require finished bore/shaft dimensions and measurement; not guaranteed by this profile.",
+  "headBearingWorkingFractionMin": 0.5,
+  "headBearingWorkingBasis": "Geometric annular-contact filter only, not a supplier torque/load rating.",
+  "modelTolerance": {"limitMm": 100, "belowLimitMm": 0.05, "aboveLimitFraction": 0.001},
+  "notes": ["Prototype engineering allocation only; selected dimensions must be specified on finished-part drawings and accepted by the actual shop.", "Material certificate, machining direction, threads, burrs, surface finish, tolerance chain and physical strength/wear/fatigue are separate acceptance tasks.", "This6061profile applies only to declared fabricatedmetalparts; custom purchased POM-C lever/cover material and process are recorded separately in the product source contract. Existing SLA profiles and historical hashes remain unchanged."]
+}

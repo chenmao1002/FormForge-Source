@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "id": "jlc-fr4-four-layer-review-20261026-v2",
+  "status": "explicit-software-review-profile",
+  "process": "FR4 four copper layers, nominal1.6mm, CNC routed outline, ordinary plated through holes",
+  "sources": [
+    {
+      "url": "https://www.jlc.com/portal/vtechnology.html",
+      "retrievedAt": "2026-10-26",
+      "sha256": "8f6b25da5269532dacae10e965992ac0a1e21ffdf59f5e1a584d2b0f0808e8de",
+      "bytes": 158512
+    },
+    {
+      "url": "https://www.jlc.com/portal/1/serviceGuide",
+      "retrievedAt": "2026-10-26",
+      "sha256": "9a18a07280b6c20ce2e42d8fe2f62984363a816f9de50d91efdfc8648e2a768b",
+      "bytes": 191125
+    },
+    {
+      "url": "https://jlcpcb.com/capabilities/pcb-capabilities/",
+      "retrievedAt": "2026-10-26",
+      "sha256": "dd962fb74ea64c04ea756dce4f9ff236971c6609879cc874a09a80c232dd7d13",
+      "bytes": 136443
+    }
+  ],
+  "profileScope": "Explicit selected native software DFM constraints for an independent ESP32 review revision; not a complete factory rule deck, upstream process declaration or supplier acceptance.",
+  "facts": {
+    "cncCopperEdgeCapabilityMm": 0.2,
+    "cncCopperEdgeRecommendedMm": 0.3,
+    "npthToCopperMinimumMm": 0.2,
+    "viaHoleToCopperMinimumMm": 0.2,
+    "innerPthHoleToCopperMinimumMm": 0.3,
+    "pthAnnularMinimumMm": 0.18,
+    "pthAnnularRecommendedMm": 0.25
+  },
+  "inheritedSource": {
+    "minTrackWidthMm": 0.1524,
+    "minViaDiameterMm": 0.7,
+    "minViaDrillMm": 0.4,
+    "minHoleToHoleMm": 0.3048
+  },
+  "notes": [
+    "The original proposed profile and SHA remain retained; actual independent review derivations explicitly record which constraints changed from the modern template.",
+    "Original project MinViaDrill is via-only; ordinary vias remain at least 0.4mm and component PTH drills are represented separately.",
+    "The 0.25mm routed-edge policy is above the published 0.2mm CNC capability; the 0.3mm recommendation remains advisory, not an upstream 0.5mm source requirement.",
+    "Hole-to-copper stays 0.25mm; no severity or manufacturing-error exclusion is lowered to accept the repairs.",
+    "This selected native deck does not prove the published component-lead annular recommendation/minimum for every pad or qualify exposed-pad thermal-hole process roles; supplier process review remains separate.",
+    "Material, copper weight, impedance, solder-mask and silk manufacturability, assembly access and supplier CAM review remain independent qualifications."
+  ],
+  "version": 2,
+  "supersedes": {
+    "id": "jlc-fr4-four-layer-review-20261026",
+    "sha256": "64ed8c2dc7ec497b74c6305f9f630c34ec7726ce6cbaabd600ef1576a38b4d1c"
+  },
+  "appliedNativeSettings": {
+    "minTrackWidthMm": 0.1524,
+    "minCopperClearanceMm": 0.1524,
+    "minViaDiameterMm": 0.7,
+    "minOrdinaryViaDrillMm": 0.4,
+    "minComponentThroughHoleDrillMm": 0.2,
+    "minHoleToHoleMm": 0.3048,
+    "minCopperEdgeMm": 0.25,
+    "minGenericHoleCopperMm": 0.25,
+    "minAnnularRingMm": 0.1,
+    "minThermalSpokes": 2,
+    "innerPthHoleCopperMm": 0.3
+  }
+}

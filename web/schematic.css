@@ -1,0 +1,153 @@
+/* Drawing structure shared with PCB; the workspace styling is schematic-only. */
+.live-drawing-body { display: flex; flex: 1; min-height: 0; min-width: 0; }
+.drawing-sheet-rail { width: 128px; flex: 0 0 128px; padding: 12px; overflow-y: auto; background: #fafcfd; border-right: 1px solid #e3edf1; }
+.drawing-sheet { display: flex; flex-direction: column; gap: 6px; width: 100%; padding: 7px; margin: 0 0 9px; border: 1px solid #e2ebef; border-radius: 8px; background: white; color: #6a8193; text-align: left; }
+.drawing-sheet[aria-current="page"] { border-color: #00a47d; background: #effbf5; box-shadow: 0 0 0 1px #00a47d18; color: #007d60; }
+.drawing-sheet>span:last-child { font-size: 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+.live-drawing .drawing-sheet svg { width: 100%; height: 56px; min-height: 56px; flex: none; background: #fffef8; pointer-events: none; }
+.sheet-placeholder { height: 56px; display: grid; place-items: center; background: linear-gradient(135deg,#f4f8fa,#eaf3ef); font-size: 22px; font-weight: 600; color: #9ab5b1; border-radius: 4px; }
+.live-drawing .drawing-main { min-width: 0; }
+.drawing-evidence { flex: 0 0 auto; font-size: 10px; padding: 7px 12px; background: #f4f8f6; color: #637c70; }
+.live-drawing-status button { border: 1px solid #e0e9ed; background: white; border-radius: 6px; min-width: 30px; height: 30px; color: #2c5366; font-size: 20px; }
+.drawing-page-label { font-size: 12px; color: #49697a; font-variant-numeric: tabular-nums; }
+.schematic-navigation { display: flex; gap: 12px; margin: 0 40px 20px; border-bottom: 1px solid #dfe9ec; overflow-x: auto; }
+.schematic-navigation button { display: flex; align-items: center; gap: 9px; padding: 12px 18px; background: transparent; border: 0; border-bottom: 2px solid transparent; color: #647e92; font-size: 13px; font-weight: 550; white-space: nowrap; }
+.schematic-navigation button[aria-selected="true"] { border-bottom-color: #00947a; color: #007b65; background: linear-gradient(0deg,#e9f7f0,transparent); }
+.schematic-navigation svg,.schematic-overview svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.schematic-view .page-heading { padding-top: 20px; padding-bottom: 12px; }
+.schematic-view h1 { font-size: 23px; overflow-wrap: anywhere; }
+.schematic-view .heading-identity { max-width: 72%; }
+.schematic-view .heading-emblem { width: 60px; height: 60px; flex-basis: 60px; }
+.schematic-view .content-layout { grid-template-columns: minmax(0,1fr) 292px; gap: 20px; }
+.schematic-view.inspector-collapsed .content-layout { grid-template-columns: minmax(0,1fr); }
+.schematic-view .main-column { display: flex; flex-direction: column; }
+.schematic-view .schematic-overview { order: 0; padding: 16px; }
+.schematic-overview .card-heading { margin-bottom: 10px; }
+.schematic-overview h2 svg { color: #008771; }
+.schematic-overview .card-subtitle { font-size: 11px; }
+.schematic-metrics { display: grid; grid-template-columns: minmax(200px,2.3fr) repeat(4,minmax(84px,1fr)); gap: 10px; }
+.schematic-file-identity,.schematic-metric { display: flex; align-items: center; min-width: 0; gap: 12px; padding: 10px 12px; border: 1px solid #edf2f5; background: #f8fbfc; border-radius: 11px; }
+.schematic-file-identity>svg { flex: 0 0 38px; width: 38px; height: 42px; padding: 10px; background: white; border: 1px solid #e4efee; border-radius: 9px; color: #008c72; }
+.schematic-file-identity>div { min-width: 0; }
+.schematic-file-identity strong { display: block; font-size: 13px; overflow-wrap: anywhere; color: #29465b; }
+.schematic-file-identity .small-tag { font-size: 10px; padding: 1px 6px; margin: 3px 0; }
+.schematic-file-identity small { display: block; color: #8296a7; font-size: 10px; }
+.schematic-metric { gap: 9px; padding: 12px; }
+.schematic-metric>svg { flex: 0 0 34px; width: 34px; height: 40px; padding: 8px; color: #7652ee; background: #f2eeff; border-radius: 10px; }
+.metric-symbols>svg { background: #e6f8f0; color: #00a77a; }
+.metric-nets>svg { background: #fff3e8; color: #ed8f35; }
+.metric-pages>svg { background: #edf3ff; color: #518be7; }
+.schematic-metric span { font-size: 11px; color: #7a90a3; }
+.schematic-metric strong { display: block; font-size: 23px; line-height: 1.35; font-variant-numeric: tabular-nums; color: #173449; }
+#schematic-net-note { margin: 9px 0 0; font-size: 10px; color: #7f93a2; }
+.schematic-view #viewer-panel { order: 1; background: white; border: 1px solid white; border-radius: 14px; padding: 12px; margin-bottom: 18px; overflow: hidden; }
+.schematic-view .viewer-toolbar { justify-content: flex-end; background: white; border: 0; padding: 0 0 12px; gap: 12px; }
+.schematic-view #artifact-select { display: none!important; }
+.schematic-view .viewer-tools { gap: 6px; flex-wrap: wrap; }
+.schematic-view .viewer-tools button { border-color: #e1eaf0; min-height: 32px; border-radius: 6px; color: #3d6176; font-size: 12px; }
+.schematic-view .canvas { height: clamp(420px,54vh,680px); border: 1px solid #e0eaef; border-radius: 9px; background: #fffef8; }
+.schematic-view .live-drawing .live-drawing-status { background: #fcfefe; border-bottom: 1px solid #e7eef2; padding: 7px 12px; }
+.schematic-view .live-drawing-status select { border: 1px solid #e0eaef; border-radius: 6px; background: white; font-size: 11px; }
+.schematic-view .viewer-footer { border: 0; padding: 9px 2px 0; gap: 12px; color: #8498a5; font-size: 10px; }
+.schematic-view #revision-card { order: 2; padding: 18px; }
+.schematic-view #schematic-extra { order: 3; }
+.schematic-view #schematic-candidates { order: 1; min-width: 0; }
+.schematic-view:not([data-schematic-tab="layout"]) #schematic-candidates { display: none; }
+.schematic-view[data-schematic-tab="layout"] #schematic-extra,
+.schematic-view[data-schematic-tab="layout"] #revision-card { display: none; }
+.candidate-picker { display: grid; gap: 8px; font-size: 13px; }
+.candidate-picker select,.candidate-preview select { max-width: 100%; min-width: 0; padding: 8px; border: 1px solid #dbe7e4; border-radius: 7px; background: white; }
+.schematic-candidate-detail section { margin: 18px 0; }
+.schematic-candidate-detail h3 { font-size: 14px; margin: 10px 0; }
+.candidate-state { padding: 12px; border-radius: 8px; background: #f0f7f4; color: #285f4e; overflow-wrap: anywhere; }
+.candidate-state.failed,.candidate-state.stale { background: #fff2ea; color: #944a22; }
+.candidate-comparison { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 16px; }
+.candidate-preview { margin: 0; min-width: 0; border: 1px solid #dfe9e6; border-radius: 9px; padding: 12px; }
+.candidate-preview figcaption { font-weight: 600; }
+.candidate-preview select { width: 100%; margin: 8px 0; font-size: 12px; }
+.candidate-preview-scroll { height: 420px; overflow: auto; background: #fffef8; border: 1px solid #e6ece9; }
+.candidate-preview img { display: block; width: 100%; max-width: none; height: auto; }
+.candidate-zoom,.candidate-report-links,.candidate-adoption { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin: 16px 0; }
+.candidate-report-links { font-size: 12px; }
+.candidate-adoption { padding-top: 12px; border-top: 1px solid #e0eae5; }
+@media (max-width: 900px) { .candidate-comparison { grid-template-columns: minmax(0,1fr); } .candidate-preview-scroll { height: 340px; } }
+.schematic-view #task-card { order: 4; }
+.schematic-view .preference-card { padding: 18px; }
+.schematic-view .preference-card textarea { min-height: 70px; height: 84px; font-size: 12px; }
+.schematic-view .preference-card .field-note { font-size: 10px; margin: 8px 0; }
+.schematic-view #save-context { background: #087b68; color: white; border-color: #087b68; }
+#schematic-check-card { padding: 18px; }
+#schematic-check-card .card-heading { gap: 8px; margin-bottom: 8px; }
+#schematic-check-card h2 { font-size: 15px; }
+#schematic-readability { margin-top: 14px; border-top: 1px solid var(--border, #dce2dc); padding-top: 12px; }
+#schematic-readability p { overflow-wrap: anywhere; font-size: 12px; }
+.schematic-pin-findings { display: grid; gap: 5px; max-height: 280px; overflow-y: auto; }
+.schematic-pin-findings button { text-align: left; white-space: normal; overflow-wrap: anywhere; font: inherit; font-size: 12px; padding: 7px 9px; border: 1px solid #dce8e3; border-radius: 6px; background: #f6faf8; color: #294d43; cursor: pointer; }
+.schematic-pin-findings button:hover,.schematic-pin-findings button:focus-visible { background: #e9f6ef; border-color: #008d6d; outline: 2px solid #008d6d33; }
+#schematic-check-card .field-note { font-size: 11px; margin: 10px 0; }
+.schematic-erc-counts { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 14px 0; }
+.schematic-erc-counts>div { display: flex; align-items: center; justify-content: space-between; padding: 10px 12px; border-radius: 9px; font-size: 12px; }
+.schematic-erc-counts strong { font-size: 22px; }
+.erc-errors { background: #fff0f2; color: #d65470; }
+.erc-warnings { background: #fff6e9; color: #b57520; }
+.schematic-check-actions { display: flex; flex-wrap: wrap; gap: 10px; font-size: 11px; }
+.schematic-view .activity-card { padding: 18px; }
+.schematic-view .activity-item { border-left: 1px solid #cfebe0; margin-left: 5px; padding: 5px 0 12px 13px; font-size: 11px; }
+.schematic-view .activity-item::before { background: #17ac81; }
+.schematic-view .revision-controls { margin-bottom: 12px; }
+.schematic-view #revision-card>details { margin-top: 12px; }
+.schematic-view:not([data-schematic-tab="preview"]) #viewer-panel { display: none!important; }
+.schematic-view[data-schematic-tab="preview"] #revision-card>details,
+.schematic-view[data-schematic-tab="preview"] #document-downloads { display: none; }
+.schematic-view:not([data-schematic-tab="checks"]):not([data-schematic-tab="preview"]) #revision-findings,
+.schematic-view:not([data-schematic-tab="checks"]):not([data-schematic-tab="preview"]) #revision-checks { display: none; }
+.schematic-view:not([data-schematic-tab="checks"]) #engineering-review,
+.schematic-view:not([data-schematic-tab="checks"]) #connection-details,
+.schematic-view:not([data-schematic-tab="libraries"]) #library-details,
+.schematic-view:not([data-schematic-tab="history"]) .revision-detail-disclosure,
+.schematic-view:not([data-schematic-tab="history"]) #design-specification,
+.schematic-view:not([data-schematic-tab="files"]) #document-downloads { display: none; }
+.schematic-view[data-schematic-tab="preview"] #schematic-extra,
+.schematic-view[data-schematic-tab="checks"] #schematic-extra { display: none; }
+.schematic-component-refs { display: flex; flex-wrap: wrap; gap: 8px; padding: 14px 0; }
+.schematic-view:not([data-schematic-tab="libraries"]) .schematic-component-list { display: none; }
+.schematic-view:not([data-schematic-tab="libraries"]) .schematic-library-empty,
+.schematic-view:not([data-schematic-tab="files"]) .schematic-file-list,
+.schematic-view:not([data-schematic-tab="history"]) .schematic-history-list { display: none; }
+.schematic-file-link,.schematic-history-item { display: flex; align-items: center; flex-wrap: wrap; gap: 14px; padding: 13px 10px; border: 0; border-bottom: 1px solid #eaf0f3; background: white; width: 100%; color: #36596e; text-align: left; font-size: 12px; }
+.schematic-file-link>span:first-child { flex: 1; overflow-wrap: anywhere; }
+.schematic-file-link small,.schematic-history-item>span { color: #7b91a1; }
+.schematic-history-item.selected { background: #eff9f4; border-radius: 8px; }
+.schematic-history-item:hover,.schematic-file-link:hover { background: #f0f8f6; }
+.schematic-view #viewer-panel.drawing-expanded { position: fixed; inset: 16px; z-index: 25; margin: 0; box-shadow: 0 0 0 30px #133c4280; display: flex!important; flex-direction: column; }
+.schematic-view .drawing-expanded .canvas { flex: 1; height: auto; min-height: 0; }
+@media (max-width: 1450px) {
+  .schematic-metrics { grid-template-columns: repeat(4,minmax(0,1fr)); }
+  .schematic-file-identity { grid-column: 1/-1; padding: 10px 12px; }
+  .schematic-file-identity>div { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+  .schematic-metric { padding: 10px; gap: 7px; }
+  .schematic-metric>svg { width: 28px; flex-basis: 28px; padding: 6px; }
+}
+@media (max-width: 1180px) {
+  .schematic-navigation { margin-left: 28px; margin-right: 28px; }
+  .schematic-view .content-layout { grid-template-columns: minmax(0,1fr); }
+  .schematic-view .inspector { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+}
+@media (max-width: 760px) {
+  .schematic-view .heading-identity { max-width: 100%; }
+  .schematic-navigation { margin: 0 16px 16px; gap: 2px; }
+  .schematic-navigation button { font-size: 12px; padding: 10px 12px; }
+  .schematic-view .inspector { display: block; }
+  .schematic-metrics { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .schematic-view .canvas { height: 480px; }
+  .drawing-sheet-rail { width: 82px; flex-basis: 82px; padding: 7px; }
+  .drawing-sheet { padding: 4px; }
+  .live-drawing .drawing-sheet svg,.sheet-placeholder { height: 42px; min-height: 42px; }
+  .schematic-view .live-drawing-status { gap: 5px; }
+  .schematic-view .live-drawing-status select { max-width: 135px; }
+  .schematic-view #viewer-panel.drawing-expanded { inset: 5px; }
+  .schematic-view .revision-controls { flex-wrap: wrap; }
+}
+
+.live-drawing-status .schematic-presentation-button { font-size: 12px; padding: 4px 10px; }
+.live-drawing-status .schematic-presentation-button[aria-pressed="true"] { background: #e8f7ef; border-color: #008b70; color: #00765f; }

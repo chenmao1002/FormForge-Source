@@ -1,0 +1,100 @@
+/* The heading identifies the page; controls and content carry the workflow. */
+.page-heading { padding-top: 24px; padding-bottom: 20px; align-items: center; gap: 20px; }
+.heading-identity { gap: 12px; }
+.heading-emblem { flex-basis: 42px; width: 42px; height: 42px; border-width: 0; border-radius: 11px; box-shadow: none; }
+.heading-emblem svg { width: 23px; height: 23px; }
+.page-heading h1 { margin: 0; font-size: 24px; }
+.nav-divider { border-top: 1px solid #36524f; margin: 14px 6px; }
+.welcome-card { min-height: 220px; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 24px; background: white; padding: 36px; }
+.welcome-card h2 { margin: 0; font-size: 26px; }
+.welcome-card .new-project { width: auto; margin: 0; padding: 12px 24px; }
+.project-intro { padding-bottom: 18px; }
+.stats .stat-card { padding: 18px; align-items: center; }
+.stats strong { margin-bottom: 0; }
+.dialog-heading h2 { margin-top: 0; }
+.page-footer { justify-content: flex-end; }
+.settings-lead { justify-content: flex-end; }
+
+/* One context panel and one action location per workspace. */
+#overview-context .preference-card { display: grid; grid-template-columns: 1fr 1fr; column-gap: 20px; }
+#overview-context .card-heading, #overview-context #project-record-details,
+#overview-context #effective-preferences, #overview-context #draft-notice,
+#overview-context #save-context { grid-column: 1 / -1; }
+#overview-context label[for="requirements"] { grid-column: 1; grid-row: 2; }
+#overview-context #requirements { grid-column: 1; grid-row: 3; }
+#overview-context label[for="preferences"] { grid-column: 2; grid-row: 2; }
+#overview-context #preferences { grid-column: 2; grid-row: 3; }
+#overview-context textarea { min-height: 120px; }
+#overview-context #save-context { width: auto; justify-self: end; }
+#project-record-details { margin: 14px 0; font-size: 12px; }
+#project-record-details .project-facts { margin-top: 8px; }
+body[data-view="schematic"] #revision-card,
+body[data-view="pcb"] #revision-card,
+body[data-view="mechanical"] #revision-card,
+body[data-view="firmware"] #revision-card { order: -1; }
+#revision-card .design-metadata { margin: 12px 0; padding: 12px 0; border: 0; border-top: 1px solid var(--line); border-radius: 0; box-shadow: none; background: transparent; }
+#revision-card .schematic-file-identity, #revision-card .schematic-metric,
+#revision-card .mechanical-metrics>div { background: transparent; border: 0; border-radius: 0; padding: 4px 10px; border-left: 1px solid var(--line); }
+#revision-card .schematic-file-identity { padding-left: 0; border-left: 0; }
+#revision-card .schematic-metric>svg, #revision-card .schematic-file-identity>svg { display: none; }
+#revision-card .schematic-metric strong, #revision-card .mechanical-metrics strong { font-size: 18px; }
+#revision-card .mechanical-metrics>div { gap: 6px; }
+#revision-card .mechanical-metrics>div:first-child { padding-left: 0; border-left: 0; }
+#revision-evidence { border-top: 1px solid var(--line); padding-top: 12px; margin-top: 12px; }
+#revision-evidence>summary { cursor: pointer; color: #42685d; font-size: 12px; }
+#revision-evidence>details { margin-top: 12px; }
+#revision-card #schematic-check-card { padding: 12px 0; }
+.schematic-view:not([data-schematic-tab="checks"]) #schematic-check-card { display: none; }
+.schematic-view:not([data-schematic-tab="preview"]) #revision-evidence>summary { display: none; }
+.schematic-view[data-schematic-tab="files"] #revision-evidence { display: none; }
+.schematic-view #revision-evidence { border-top: 0; padding-top: 0; }
+body[data-view="firmware"] #firmware-panel { padding: 22px; background: white; border: 1px solid var(--line); border-radius: 14px; }
+body[data-view="firmware"] .firmware-panel>.firmware-hero { padding: 0 0 16px; margin: 0; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; background: transparent; box-shadow: none; }
+body[data-view="firmware"] .firmware-tabpanel { padding: 18px 0 0; border: 0; border-radius: 0; }
+body[data-view="firmware"] .firmware-tabs { margin-top: 10px; }
+.settings-tabs { display: flex; gap: 8px; flex-wrap: wrap; border-bottom: 1px solid var(--line); }
+.settings-layout { display:grid;grid-template-columns:190px minmax(0,1fr);gap:20px;align-items:start; }
+.settings-layout .settings-tabs { flex-direction:column;border-bottom:0;position:sticky;top:20px; }
+.settings-layout .settings-tabs button { text-align:left;border-radius:8px; }
+.settings-contents { min-width:0; }
+.settings-defaults>section { margin-top:28px;padding-top:20px;border-top:1px solid var(--line); }
+.settings-form-grid label { display:flex;flex-direction:column;gap:8px;min-width:0; }
+@media(max-width:760px){.settings-layout{grid-template-columns:1fr;}.settings-layout .settings-tabs{position:static;flex-direction:row;}.settings-layout .settings-tabs button{flex:1 0 auto;}}
+.settings-tabs button { padding: 12px 16px; border: 0; border-bottom: 2px solid transparent; background: transparent; color: #4c6b76; font: inherit; font-size: 13px; }
+.settings-tabs button[aria-selected="true"] { border-bottom-color: var(--accent); color: var(--accent); background: #edf8f3; }
+.settings-tabs button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.settings-tabpanel { background: white; border: 1px solid var(--line); border-radius: 14px; padding: 0 24px; }
+.settings-tabpanel>.card { margin: 0; padding: 24px 0; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; box-shadow: none; }
+.settings-tabpanel>.card:last-child { border-bottom: 0; }
+#activity-history { border-top: 1px solid var(--line); padding-top: 14px; margin-top: 18px; font-size: 12px; }
+#activity-history>summary { cursor: pointer; color: #496d62; }
+#activity-history .activity-list { margin-top: 12px; }
+.live-drawing>.live-drawing-status { display: none; }
+@media (max-width: 760px) {
+  .drawing-sheet-rail { display: none; }
+  .live-drawing[data-kind="schematic"][data-multiple-sheets="true"]>.live-drawing-status { display: flex; }
+  #overview-context .preference-card { display: block; }
+  #overview-context #save-context { width: 100%; }
+  #revision-card .schematic-metrics { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  #revision-card .schematic-file-identity { grid-column: 1 / -1; }
+  #revision-card .schematic-metric { padding-left: 0; border-left: 0; }
+  .settings-tabpanel { padding: 0 16px; }
+  .settings-tabs button { padding: 10px; }
+  body[data-view="firmware"] #firmware-panel { padding: 16px; }
+  body[data-view="firmware"] .firmware-panel>.firmware-hero { padding-top: 28px; }
+}
+@media (max-width:760px) {
+  .page-heading { padding: 20px 17px 16px; }
+  .heading-actions { width: 100%; justify-content: flex-start; }
+  .welcome-card { padding: 28px; }
+}
+
+#revision-card .mechanical-metrics { grid-template-columns: repeat(3,minmax(0,1fr)); }
+body[data-view="firmware"] .firmware-identity h2 { display: inline; font-size: 20px; margin: 0 12px 0 0; }
+body[data-view="firmware"] .firmware-panel>.firmware-hero { padding-top: 0; }
+#revision-card .revision-summary { padding-top: 12px; padding-bottom: 8px; }
+@media (max-width:760px) { #revision-card .mechanical-metrics { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+
+.settings-form-grid input[type="color"]{height:42px;min-height:42px;padding:4px;width:100%}
+.settings-form-grid .settings-color-toggle{display:flex;flex-direction:row;align-items:center;gap:8px;margin:8px 0}
+.settings-color-toggle input[type="checkbox"]{width:auto;margin:0}

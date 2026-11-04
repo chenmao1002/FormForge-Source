@@ -1,0 +1,26 @@
+{
+  "sourceRoot": "local-source/1021C",
+  "sourceCommit": "f599e8aa3224ec89ab1168e17b84f4f57dc79281",
+  "date": "2026-10-22",
+  "authorization": "User explicitly authorized local reuse of selected 1021C code and workflows.",
+  "license": "UNKNOWN: no applicable source/root license found. User-authorized local reuse only; no redistribution grant asserted.",
+  "files": [
+    {
+      "source": "local-source/1021C/workers/circuit_component_keepouts.py",
+      "sourceSha256": "7338ccd59b3787d28b3ab1cc7de7ccfa2acce2b688c2158c5778066597e8ca70",
+      "archive": "vendor/pcb-1021c-body-gap/circuit_component_keepouts.py",
+      "archiveSha256": "7338ccd59b3787d28b3ab1cc7de7ccfa2acce2b688c2158c5778066597e8ca70"
+    },
+    {
+      "source": "local-source/1021C/research/dense135-workflow-20261020/workflow/workers/circuit_body_core_guard.py",
+      "sourceSha256": "188836040a30bee0582aa2afb3dc2c6c2e4da2bfc3bf589dbb934ef08dae0674",
+      "archive": "vendor/pcb-1021c-body-gap/circuit_body_core_guard.py",
+      "archiveSha256": "188836040a30bee0582aa2afb3dc2c6c2e4da2bfc3bf589dbb934ef08dae0674"
+    }
+  ],
+  "derived": {
+    "path": "src/formforge/adapters/body_gap.py",
+    "sha256": "2f78fd23f48a16f6728caefc63f43cff5c3a0f320688a54c60d0f79b35c3096c"
+  },
+  "adaptation": "Pad-gap inference and spatially indexed finite-width native collision idea adapted. Geometry normalized to footprint local coordinates; single closed convex Fab ring clipped to empty pad gap; coverage reasons, footprint UUID, search diagnostics and post-save proof added. Upstream prepare() and protect_spaces(), keepout mutation, old runtime and dependencies not imported."
+}

@@ -1,0 +1,523 @@
+/* Unified presentation for the remaining design and delivery workspaces. */
+.module-view {
+  --module-accent: #008c70;
+  --module-accent-strong: #006f59;
+  --module-soft: #eaf7f2;
+  --module-ink: #173046;
+  --module-muted: #6f8291;
+  --module-line: #e3ebef;
+  background:
+    radial-gradient(circle at 56% 110px,#dff3ed80 0,transparent 31%),
+    #f3f8f8;
+}
+
+.module-view .page-heading {
+  padding-top: 28px;
+  padding-bottom: 26px;
+}
+.module-view .heading-identity { min-width: 0; }
+.module-view .heading-emblem {
+  border-color: #d4eee6;
+  background: linear-gradient(145deg,#08ae86,#00755e);
+  box-shadow: inset 0 0 0 1px #ffffff42,0 8px 22px #08765a1a;
+}
+.module-view .heading-identity h1 { color: var(--module-ink); }
+.module-view .heading-identity p { color: var(--module-muted); }
+.module-view .heading-actions .button {
+  min-height: 42px;
+  padding-inline: 17px;
+  border-radius: 9px;
+}
+.module-view .heading-actions .button.primary {
+  background: linear-gradient(135deg,#008c70,#00705b);
+  border-color: #00755e;
+}
+
+.module-view .content-layout { gap: 22px; }
+.module-view .main-column > .card,
+.module-view #viewer-panel {
+  border: 1px solid #fff;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 8px 28px #1b40510a,0 1px 2px #1b405106;
+}
+.module-view .main-column > .card { padding: 24px; }
+.module-view .main-column > .card > h2,
+.module-view .main-column > .card .card-heading h2,
+.module-view .main-column > .card > form > h2 {
+  color: var(--module-ink);
+  font-size: 17px;
+  letter-spacing: -.15px;
+}
+.module-view .main-column > .card > h2:first-child::before,
+.module-view .main-column > .card .card-heading h2:first-child::before,
+.module-view #task-card .card-heading h2::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 16px;
+  margin-right: 9px;
+  border-radius: 999px;
+  vertical-align: -2px;
+  background: linear-gradient(#22bd93,#008269);
+}
+.module-view .field-note,
+.module-view .quiet-note { color: #748793; }
+
+/* Version summary shared by PCB, mechanical and firmware. */
+.module-view .revision-card {
+  position: relative;
+  overflow: hidden;
+  padding: 20px 24px 19px;
+  background: linear-gradient(110deg,#ffffff 0,#ffffff 72%,#edf9f5 100%);
+}
+.module-view .revision-card::before {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: linear-gradient(#14b58b,#008269);
+}
+.module-view .revision-controls {
+  display: grid;
+  grid-template-columns: auto minmax(220px,1fr) auto;
+  gap: 12px;
+}
+.module-view .revision-controls label {
+  color: #657b88;
+  font-weight: 600;
+}
+.module-view .revision-controls select {
+  min-height: 42px;
+  border-color: #dbe8e4;
+  background: #fbfdfc;
+}
+.module-view .revision-controls .text-button {
+  min-height: 38px;
+  padding-inline: 12px;
+  border: 1px solid #dcebe5;
+  background: #eff8f4;
+}
+.module-view .revision-summary {
+  margin-top: 14px;
+  padding-top: 13px;
+  border-top: 1px solid #edf2f4;
+}
+.module-view .revision-summary strong {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #08745d;
+  font-size: 12px;
+}
+.module-view .revision-summary strong::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #18a878;
+  box-shadow: 0 0 0 4px #18a87815;
+}
+.module-view .revision-summary strong.pending::before { background: #dd9a32; box-shadow: 0 0 0 4px #dd9a3218; }
+.module-view .revision-detail-disclosure,
+.module-view .revision-card > details {
+  border-color: #e8eff1;
+}
+.module-view details > summary {
+  color: #315f60;
+  font-weight: 570;
+}
+
+/* Native PCB / mechanical viewer. */
+.module-view #viewer-panel { border-color: #fff; }
+.module-view .pcb-view-tabs {
+  gap: 0;
+  padding: 0 18px;
+  border-bottom: 1px solid #e8eef1;
+}
+.module-view .pcb-view-tabs button {
+  min-height: 48px;
+  padding: 0 18px;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  background: transparent;
+  color: #71818d;
+}
+.module-view .pcb-view-tabs button[aria-selected=true] {
+  border-color: #009373;
+  background: transparent;
+  box-shadow: none;
+  color: #00745d;
+}
+.module-view .viewer-toolbar {
+  min-height: 58px;
+  padding: 10px 18px;
+  border-bottom: 1px solid #edf1f3;
+}
+.module-view .viewer-toolbar select {
+  min-height: 36px;
+  max-width: min(58%,620px);
+  padding-inline: 10px 32px;
+  border: 1px solid transparent;
+  background-color: #f6faf8;
+  color: #274b4b;
+}
+.module-view .viewer-tools button {
+  min-width: 36px;
+  min-height: 36px;
+  border: 1px solid #e2ebe7;
+  background: #f4f8f6;
+  color: #31685a;
+}
+.module-view .viewer-tools button:hover { border-color: #c4ddd4; background: #e9f5f0; }
+.module-view .download-link { color: #00775f; font-weight: 600; }
+.module-view .canvas {
+  min-height: 480px;
+  border: 0;
+  background-color: #f8fbfa;
+  background-image: radial-gradient(#c8d9d5 .7px,transparent .7px);
+  background-size: 19px 19px;
+}
+.module-view .canvas.pcb-canvas {
+  background-color: #12383c;
+  background-image: radial-gradient(#4b696c .7px,transparent .7px);
+}
+.module-view .viewer-footer {
+  min-height: 42px;
+  align-items: center;
+  border-top: 1px solid #edf1f3;
+  color: #72858e;
+}
+.module-view .mechanical-controls {
+  padding: 13px 18px;
+  border-color: #e4ece9;
+  background: #eef8f4;
+}
+
+/* Project sources: denser cards that remain easy to scan. */
+body[data-view="sources"] #sources-panel > .quiet-note {
+  margin: 0 -24px;
+  padding: 15px 24px;
+  border-top: 1px solid #edf1f3;
+  border-bottom: 1px solid #edf1f3;
+  background: #f8fbfa;
+}
+body[data-view="sources"] .source-list {
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 14px;
+  margin: 20px 0;
+}
+body[data-view="sources"] .source-record {
+  display: flex;
+  min-width: 0;
+  min-height: 205px;
+  flex-direction: column;
+  padding: 18px;
+  border-color: #e2eaed;
+  border-radius: 12px;
+  background: linear-gradient(145deg,#ffffff,#f8fbfa);
+  box-shadow: 0 2px 10px #203e4e05;
+}
+body[data-view="sources"] .source-record:hover {
+  border-color: #c9dfd8;
+  box-shadow: 0 8px 24px #1d59450d;
+}
+body[data-view="sources"] .source-record .card-heading { margin-bottom: 8px; }
+body[data-view="sources"] .source-record h3 {
+  min-width: 0;
+  color: #18364a;
+  font-size: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+body[data-view="sources"] .source-record > p:not(.field-note) {
+  display: -webkit-box;
+  overflow: hidden;
+  margin: 4px 0 8px;
+  line-height: 1.7;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+body[data-view="sources"] .source-details { margin: 6px 0 5px; }
+body[data-view="sources"] .source-record > .text-button {
+  align-self: flex-start;
+  margin-top: auto;
+  padding-left: 0;
+  color: #00745e;
+  font-weight: 600;
+}
+
+/* Mechanical parameter editor and firmware evidence. */
+body[data-view="mechanical"] #mechanical-parameters { padding: 24px; }
+.module-view .mechanical-parameter-form { gap: 18px; }
+.module-view .mechanical-parameter-grid {
+  gap: 12px;
+  padding: 18px;
+  border: 1px solid #e3ece9;
+  border-radius: 12px;
+  background: #f7fbf9;
+}
+.module-view .mechanical-parameter-grid label {
+  padding: 12px;
+  border: 1px solid #e5ece9;
+  border-radius: 9px;
+  background: #fff;
+  color: #405d60;
+}
+.module-view .mechanical-parameter-grid input { border-color: #dce7e3; border-radius: 8px; }
+.module-view .mechanical-parameter-form details {
+  padding: 13px 15px;
+  border: 1px solid #e5ecea;
+  border-radius: 9px;
+  background: #fbfdfc;
+}
+.module-view .firmware-panel { padding: 24px; }
+.module-view .firmware-panel > .card-heading {
+  margin: -2px 0 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e9eff2;
+}
+.module-view .firmware-requirements {
+  margin: 8px 0 18px;
+  padding: 14px 16px;
+  border-left: 3px solid #36b991;
+  border-radius: 0 9px 9px 0;
+  background: #f2faf7;
+  color: #36545f;
+}
+.module-view .firmware-binding {
+  padding: 18px;
+  border-color: #dceae5;
+  border-radius: 11px;
+  background: linear-gradient(135deg,#f2faf7,#f8fbfa);
+}
+.module-view .firmware-metrics { gap: 13px; }
+.module-view .firmware-metrics > div {
+  position: relative;
+  overflow: hidden;
+  padding: 16px;
+  border-color: #e0e9ed;
+  border-radius: 10px;
+  background: #fff;
+}
+.module-view .firmware-metrics > div::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 0;
+  height: 3px;
+  background: linear-gradient(90deg,#1ab68a,#8ddbc5);
+}
+.module-view .firmware-source-toolbar select { border-radius: 9px; background: #f7faf9; }
+.module-view .firmware-source,
+.module-view .firmware-error { border-radius: 11px; }
+.module-view .firmware-source { background: #102f35; color: #d8eee7; }
+
+/* Manufacturing navigation and all delivery subpanels. */
+body[data-view="manufacturing"] .main-column { min-width: 0; }
+body[data-view="manufacturing"] .manufacturing-tabs {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 2px;
+  overflow-x: auto;
+  margin-bottom: 20px;
+  padding: 0 12px !important;
+  border: 1px solid #fff;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 6px 22px #1b405109;
+  scrollbar-width: thin;
+}
+body[data-view="manufacturing"] .manufacturing-tabs button {
+  position: relative;
+  flex: 0 0 auto;
+  min-height: 54px;
+  padding: 0 15px;
+  border-radius: 0;
+  background: transparent;
+  color: #667b87;
+  white-space: nowrap;
+}
+body[data-view="manufacturing"] .manufacturing-tabs button::after {
+  content: '';
+  position: absolute;
+  right: 15px;
+  bottom: 0;
+  left: 15px;
+  height: 2px;
+  border-radius: 999px 999px 0 0;
+  background: transparent;
+}
+body[data-view="manufacturing"] .manufacturing-tabs button:hover { background: #f3f9f7; }
+body[data-view="manufacturing"] .manufacturing-tabs button[aria-selected=true] {
+  background: transparent;
+  box-shadow: none;
+  color: #00745d;
+  font-weight: 650;
+}
+body[data-view="manufacturing"] .manufacturing-tabs button[aria-selected=true]::after {
+  background: #00a17d;
+}
+body[data-view="manufacturing"] .manufacturing-panel {
+  padding: 25px;
+  overflow: hidden;
+}
+body[data-view="manufacturing"] .manufacturing-panel > h2:first-child {
+  margin-bottom: 6px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e9eff2;
+}
+body[data-view="manufacturing"] .manufacturing-panel > h2:first-child + .field-note {
+  margin-top: 13px;
+}
+body[data-view="manufacturing"] .manufacturing-panel h3 { color: #244153; }
+body[data-view="manufacturing"] .manufacturing-panel > .revision-toolbar {
+  padding: 12px;
+  border: 1px solid #e1ebe7;
+  border-radius: 10px;
+  background: #f6faf8;
+}
+body[data-view="manufacturing"] .manufacturing-panel details {
+  padding: 12px 14px;
+  border: 1px solid #e4ecea;
+  border-radius: 9px;
+  background: #fbfdfc;
+}
+body[data-view="manufacturing"] .manufacturing-panel details details { background: #fff; }
+body[data-view="manufacturing"] .manufacturing-form,
+body[data-view="manufacturing"] .external-cam-form,
+body[data-view="manufacturing"] .structural-form {
+  gap: 14px;
+  padding: 18px;
+  border: 1px solid #e3ece9;
+  border-radius: 12px;
+  background: #f8fbfa;
+}
+body[data-view="manufacturing"] .manufacturing-form input,
+body[data-view="manufacturing"] .manufacturing-form select,
+body[data-view="manufacturing"] .external-cam-form input,
+body[data-view="manufacturing"] .external-cam-form select,
+body[data-view="manufacturing"] .external-cam-form textarea,
+body[data-view="manufacturing"] .structural-form input,
+body[data-view="manufacturing"] .structural-form select,
+body[data-view="manufacturing"] .structural-form textarea {
+  min-height: 42px;
+  border-color: #dce7e3;
+  border-radius: 8px;
+  background: #fff;
+}
+body[data-view="manufacturing"] .procurement-lines { gap: 14px; }
+body[data-view="manufacturing"] .procurement-line,
+body[data-view="manufacturing"] .external-cam-file,
+body[data-view="manufacturing"] .supplier-session-status {
+  border-color: #dfe9e6;
+  border-radius: 10px;
+  background: linear-gradient(145deg,#fff,#f7fbf9);
+}
+body[data-view="manufacturing"] .structural-results {
+  overflow: hidden;
+  border: 1px solid #e2e9ed;
+  border-radius: 10px;
+}
+body[data-view="manufacturing"] .manufacturing-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+body[data-view="manufacturing"] .manufacturing-row select {
+  flex: 1 1 260px;
+  min-width: 0;
+  min-height: 42px;
+  border-radius: 8px;
+}
+
+/* Task history is shared by all remaining pages. */
+.module-view #task-card { padding: 24px; }
+.module-view #task-card .card-heading {
+  margin-bottom: 6px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e9eff2;
+}
+.module-view #job-list { display: grid; gap: 8px; padding: 10px 4px 0 0; }
+.module-view .job-row {
+  margin: 0;
+  padding: 13px 14px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: #fbfdfc;
+}
+.module-view .job-row:first-child { padding-top: 13px; }
+.module-view .job-row:hover { border-color: #dce9e5; background: #f5faf8; }
+.module-view .job-symbol {
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 10px;
+  background: #eaf6f0;
+  color: #168266;
+}
+.module-view .job-info strong { color: #253f50; }
+.module-view .job-info p { color: #617986; }
+.module-view .job-actions { max-width: 36%; }
+
+@media (max-width: 980px) {
+  body[data-view="sources"] .source-list { grid-template-columns: 1fr; }
+  .module-view .revision-controls { grid-template-columns: auto minmax(0,1fr); }
+  .module-view .revision-controls .text-button { grid-column: 2; justify-self: start; }
+}
+
+@media (max-width: 760px) {
+  .module-view .page-heading { padding-top: 20px; padding-bottom: 20px; }
+  .module-view .heading-emblem { width: 54px; height: 54px; flex-basis: 54px; border-width: 5px; border-radius: 16px; }
+  .module-view .heading-emblem svg { width: 25px; height: 25px; }
+  .module-view .main-column > .card { padding: 18px; }
+  .module-view .revision-card { padding: 18px 18px 17px 21px; }
+  .module-view .revision-controls { display: flex; align-items: stretch; }
+  .module-view .revision-controls label { width: 100%; }
+  .module-view .revision-controls select { flex: 1 1 100%; }
+  .module-view .revision-controls .text-button { align-self: flex-start; }
+  .module-view .pcb-view-tabs { overflow-x: auto; padding-inline: 8px; }
+  .module-view .pcb-view-tabs button { flex: 1 0 auto; min-height: 46px; padding-inline: 14px; }
+  .module-view .viewer-toolbar select { max-width: 100%; }
+  .module-view .canvas { min-height: 420px; }
+  body[data-view="sources"] #sources-panel > .quiet-note { margin-inline: -18px; padding-inline: 18px; }
+  body[data-view="sources"] .source-record { min-height: 0; }
+  body[data-view="manufacturing"] .manufacturing-tabs { margin-inline: 0; }
+  body[data-view="manufacturing"] .manufacturing-tabs button { min-height: 50px; padding-inline: 13px; }
+  body[data-view="manufacturing"] .manufacturing-panel { padding: 18px; }
+  body[data-view="manufacturing"] .manufacturing-form,
+  body[data-view="manufacturing"] .external-cam-form,
+  body[data-view="manufacturing"] .structural-form { padding: 14px; }
+  .module-view #task-card { padding: 18px; }
+  .module-view .job-row { padding: 12px; }
+  .module-view .job-row:first-child { padding-top: 12px; }
+  .module-view .job-actions { max-width: none; }
+}
+
+.flash-import-form { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; max-width: 760px; margin-block: 18px; }
+.flash-file-row { display: grid; grid-template-columns: minmax(100px, 1fr) minmax(140px, 1fr) minmax(100px, 1fr); gap: 8px; margin-block: 8px; }
+.flash-file-row span { overflow-wrap: anywhere; }
+.flash-import-form input, .flash-import-form select { min-width: 0; max-width: 100%; }
+.firmware-tabpanel .source-record { min-width: 0; }
+.firmware-tabpanel .source-record select, .firmware-tabpanel .source-record input { max-width: 100%; min-width: 0; }
+.firmware-tabpanel .source-record pre { white-space: pre-wrap; overflow-wrap: anywhere; max-height: 360px; overflow: auto; }
+@media (max-width: 650px) { .flash-file-row { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 420px) {
+  .module-view .heading-identity { align-items: flex-start; }
+  .module-view .heading-emblem { width: 48px; height: 48px; flex-basis: 48px; }
+  .module-view .heading-identity h1 { font-size: 23px; }
+  .module-view .revision-controls { gap: 8px; }
+  .module-view .revision-controls .text-button { width: 100%; justify-content: center; }
+  .module-view .canvas { min-height: 370px; height: 56vh; }
+  body[data-view="sources"] .source-record { padding: 15px; }
+}
+.agent-workflow {overflow-wrap:anywhere;min-width:0}
+.agent-workflow h3 {margin-top:0}
+.agent-workflow p {white-space:pre-wrap;margin:.45rem 0 .8rem}
+.agent-workflow details {margin:.65rem 0}
+.agent-workflow summary {cursor:pointer;line-height:1.6}
+.agent-workflow .workflow-entry {padding:.6rem 0;border-bottom:1px solid var(--border,#d7dde4)}
+.agent-workflow .workflow-attention {color:var(--warning,#996619)}

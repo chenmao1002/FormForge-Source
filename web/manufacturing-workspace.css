@@ -1,0 +1,47 @@
+body[data-view="manufacturing"] .main-column{display:flex;flex-direction:column;min-width:0;gap:18px}
+body[data-view="manufacturing"] #manufacturing-tabs{order:0;margin:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));padding:9px!important;gap:5px;overflow:visible}
+body[data-view="manufacturing"] #manufacturing-tabs button{white-space:normal;min-width:0;min-height:43px;border-radius:8px;padding:9px 8px;font-size:12px;border:1px solid transparent}
+body[data-view="manufacturing"] #manufacturing-tabs button::after{display:none}
+body[data-view="manufacturing"] #manufacturing-tabs button[aria-selected="true"]{background:#007f67;color:white;border-color:#007f67;box-shadow:0 4px 10px #007b5c20}
+body[data-view="manufacturing"] #manufacturing-tabs button:focus-visible{outline:2px solid #00a583;outline-offset:2px}
+body[data-view="manufacturing"] #manufacturing-tabs button[data-stage="prepare"]{border-bottom-color:#ceebe2}
+body[data-view="manufacturing"] #manufacturing-tabs button[data-stage="quote"]{border-bottom-color:#d2e7f6}
+body[data-view="manufacturing"] #manufacturing-tabs button[data-stage="execute"]{border-bottom-color:#eadff3}
+body[data-view="manufacturing"] #manufacturing-current{order:1}
+body[data-view="manufacturing"] #manufacturing-overview{order:2;padding:24px}
+body[data-view="manufacturing"] .manufacturing-panel{order:3}
+body[data-view="manufacturing"] #task-card{order:4}
+.manufacturing-hero{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:3px 0 21px;border-bottom:1px solid #e5eeea}
+.manufacturing-hero h2{margin:9px 0 10px;font-size:24px;color:#14394b}.manufacturing-hero .small-tag{white-space:nowrap}
+.manufacturing-summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:20px 0}
+.manufacturing-summary>div{display:grid;gap:10px;padding:16px;border:1px solid #e1eee8;border-radius:10px;background:linear-gradient(135deg,#f2faf6,#fcfdfc)}
+.manufacturing-summary span{font-size:12px;color:#527369}.manufacturing-summary strong{font-size:29px;line-height:1.2;color:#007e66}.manufacturing-summary small{font-size:11px;color:#8b9a9f}
+.manufacturing-summary>div:last-child strong{color:#ab7345}
+.manufacturing-routes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:0 0 28px}
+.manufacturing-route{border:1px solid #e1ece7;border-radius:12px;padding:18px;background:#fff;position:relative;min-width:0}
+.route-index{display:inline-flex;align-items:center;justify-content:center;width:33px;height:33px;border-radius:9px;color:#008568;background:#e2f5ed;font-weight:700;font-size:12px}
+.manufacturing-route:nth-child(2) .route-index{color:#2f86b5;background:#e5f2fc}.manufacturing-route:nth-child(3) .route-index{color:#8865b4;background:#f1eafa}
+.manufacturing-route h3{font-size:16px;color:#244555;margin:12px 0 8px}.manufacturing-route p{min-height:36px}
+.manufacturing-route button{display:block;width:100%;text-align:left;border-top:1px solid #edf2ef;padding:9px 0;margin-top:5px;font-size:12px;white-space:normal}
+#manufacturing-overview>.card-heading{font-size:17px;color:#183f4c;font-weight:650;margin-bottom:8px}
+.manufacturing-file-tools{display:flex;flex-wrap:wrap;gap:9px;margin:15px 0}
+.manufacturing-file-tools input,.manufacturing-file-tools select{box-sizing:border-box;padding:10px;border:1px solid #dce9e3;border-radius:8px;min-width:0;font:inherit;font-size:12px;background:#f8fbfa;color:#42695f}
+.manufacturing-file-tools input{flex:1 1 220px}.manufacturing-file-tools select{flex:1 1 145px;max-width:230px}.manufacturing-file-tools .button{font-size:12px}
+.manufacturing-file-list{display:grid;gap:9px}
+.manufacturing-file-row{display:flex;align-items:center;gap:14px;border:1px solid #e4ece9;border-radius:9px;padding:14px;background:#fcfefd;min-width:0}
+.manufacturing-file-info{flex:1;min-width:0}.manufacturing-file-info strong{font-size:13px;color:#31565c;overflow-wrap:anywhere}.manufacturing-file-info p{margin:6px 0 0;font-size:11px}.manufacturing-file-row .badge{flex-shrink:0;font-size:10px}.manufacturing-file-row .button{font-size:11px;padding:8px 12px;white-space:nowrap}
+.manufacturing-file-evidence{font-size:11px;color:#69877c;margin-top:8px}.manufacturing-file-evidence summary{cursor:pointer}.manufacturing-file-evidence code{margin-top:9px;overflow-wrap:anywhere}
+.manufacturing-file-pager{display:flex;align-items:center;gap:9px;margin-top:15px}.manufacturing-file-pager>span{margin-right:auto}.manufacturing-file-pager .button{font-size:11px;padding:8px 13px}
+.manufacturing-current{padding:4px 4px 0}.manufacturing-current h2{font-size:23px;color:#1c4350;margin:8px 0}.manufacturing-current p{font-size:13px;color:#748890;margin:0;line-height:1.6}
+#manufacturing-guide h2{font-size:16px;color:#173d4a;margin:0 0 14px}#manufacturing-guide .button{font-size:12px;margin:9px 0 0;justify-content:center;white-space:normal}#manufacturing-guide>.text-button{margin-top:18px}
+body[data-view="manufacturing"] .manufacturing-panel>h2:first-child{font-size:17px;padding-bottom:13px}
+body[data-view="manufacturing"] .manufacturing-panel .document-downloads{display:flex;flex-wrap:wrap;gap:8px;padding:14px;background:#f0f8f4;border:1px solid #dceee5;border-radius:10px}
+body[data-view="manufacturing"] .manufacturing-panel .document-downloads a{padding:7px 9px;background:white;border:1px solid #e0ece5;border-radius:7px;font-size:12px}
+body[data-view="manufacturing"] .manufacturing-panel .manufacturing-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin-top:20px}
+body[data-view="manufacturing"] .manufacturing-panel .manufacturing-form>h3,body[data-view="manufacturing"] .manufacturing-panel .manufacturing-form>p,body[data-view="manufacturing"] .manufacturing-panel .manufacturing-form>button{grid-column:1/-1}
+body[data-view="manufacturing"] .manufacturing-panel input:focus,body[data-view="manufacturing"] .manufacturing-panel select:focus,body[data-view="manufacturing"] .manufacturing-panel textarea:focus{outline:2px solid #80d7bb;outline-offset:1px}
+@media(max-width:1200px){.manufacturing-summary{grid-template-columns:repeat(2,minmax(0,1fr))}.manufacturing-routes{grid-template-columns:1fr}.manufacturing-route{display:grid;grid-template-columns:34px minmax(0,1fr);gap:5px 14px}.manufacturing-route h3{margin:7px 0}.manufacturing-route p,.manufacturing-route button{grid-column:2}.manufacturing-route p{min-height:0;margin:0 0 6px}.manufacturing-route button{margin:0;padding:8px 0}}
+@media(max-width:760px){body[data-view="manufacturing"] #manufacturing-tabs{grid-template-columns:repeat(3,minmax(0,1fr));padding:6px!important;gap:3px}body[data-view="manufacturing"] #manufacturing-overview{padding:16px}.manufacturing-hero{flex-wrap:wrap}.manufacturing-hero h2{font-size:20px}.manufacturing-summary{gap:8px}.manufacturing-summary>div{padding:12px}.manufacturing-file-row{flex-wrap:wrap;gap:8px;padding:12px}.manufacturing-file-info{flex-basis:100%}.manufacturing-file-row .button{margin-left:auto}.manufacturing-file-tools select{max-width:none}.manufacturing-file-tools .button{flex:1 0 auto}body[data-view="manufacturing"] .manufacturing-panel .manufacturing-form{grid-template-columns:1fr}.manufacturing-current h2{font-size:20px}}
+.manufacturing-file-list{max-height:620px;overflow:auto;padding-right:4px;scrollbar-width:thin}
+.manufacturing-file-list:focus-visible{outline:2px solid #00a583;outline-offset:2px;border-radius:8px}
+#manufacturing-task-filter{display:flex;align-items:center;gap:7px;font-size:12px;color:#587a6f}#manufacturing-task-filter input{accent-color:#00866b}

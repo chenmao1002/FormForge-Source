@@ -1,0 +1,4 @@
+# Update intentionally, then regenerate and verify requirements-flash.lock.txt.
+pyocd==0.46.0
+esptool==5.6.0
+pyelftools==0.33

@@ -1,0 +1,30 @@
+{
+  "kind": "process-profile",
+  "id": "jlc-sla-resin-20261025",
+  "version": 1,
+  "provider": "jlc3dp",
+  "process": "SLA",
+  "materials": ["9000HE"],
+  "units": "mm",
+  "reviewedAt": "2026-10-25",
+  "sources": [
+    {"url": "https://jlc3dp.com/help/article/3d-printing-design-guideline", "use": "Official design guideline; size-dependent walls, separate assembled vs moving clearances, tolerances; not a per-order acceptance."},
+    {"url": "https://www.jlc-3dp.cn/technicalColumnsDetails/60933.html", "use": "Material identity and intended functional prototype use only; generic design guideline retained for clearance limits."},
+    {"url": "https://www.jlc-3dp.cn/technicalColumnsDetails/41455", "use": "Domestic insertion service lists M3/M4/M5, wall >=3 and 14x14 mounting plane. Do not claim M2 provider insertion."}
+  ],
+  "wallByMaxPartSpan": [[5, 0.5], [10, 0.8], [50, 1.0], [100, 1.5], [200, 2.0]],
+  "featureWallMin": 1.6,
+  "featureWallBasis": "Project working value > supplier recommendation of 1.5mm; not quoted as an official exact minimum.",
+  "staticGapMin": 0.2,
+  "movingGapMin": 0.5,
+  "clearanceConvention": "one-side linear clearance for simple interfaces; diameter clearance is twice radial clearance; not a worst-case fit guarantee",
+  "modelTolerance": {"limitMm": 100, "belowLimitMm": 0.2, "aboveLimitFraction": 0.003},
+  "holeDiameterToleranceMm": 0.3,
+  "headBearingWorkingFractionMin": 0.5,
+  "headBearingWorkingBasis": "Project geometric contact filter, not a supplier load or torque rating; normal clearance holes leave part of the head annulus unsupported.",
+  "detailWidthMin": 0.8,
+  "detailDepthMin": 0.8,
+  "printedThreadMinNominalMm": 6,
+  "supplierInsertedThreads": ["M3", "M4", "M5"],
+  "notes": ["Painting, deformation, support removal, position tolerance chains and actual order review need separate consideration.", "Nominal guideline compliance is not a guaranteed fit or strength certification."]
+}

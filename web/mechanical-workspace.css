@@ -1,0 +1,59 @@
+body[data-view="mechanical"] .main-column { display:flex; flex-direction:column; min-width:0; }
+body[data-view="mechanical"] #mechanical-overview { order:0; }
+body[data-view="mechanical"] #mechanical-parameters { order:1; }
+body[data-view="mechanical"] #viewer-panel { order:2; display:grid; grid-template-columns:minmax(0,1fr) 220px; padding:18px; gap:0 14px; }
+body[data-view="mechanical"] #revision-card { order:3; }
+body[data-view="mechanical"] #task-card { order:4; }
+.mechanical-metrics { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; }
+.mechanical-metrics>div { display:grid; align-content:start; gap:10px; background:#f5faf8; border:1px solid #e5eeea; border-radius:10px; padding:14px; min-width:0; }
+.mechanical-metrics span { color:#71838d; font-size:12px; }
+.mechanical-metrics strong { font-size:18px; color:#17483e; overflow-wrap:anywhere; }
+.mechanical-metrics>div:nth-child(-n+2) strong { font-size:26px; }
+.mechanical-view-heading { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px; grid-column:1/-1; padding:0 0 14px; }
+.mechanical-view-heading h2 { margin:0; font-size:17px; color:#173046; }
+.mechanical-camera-tools { display:flex; flex-wrap:wrap; gap:6px; }
+.mechanical-camera-tools button { border:1px solid #e1ebe7; border-radius:7px; padding:7px 10px; background:#f7faf9; color:#55716a; font-size:12px; }
+.mechanical-camera-tools button[aria-pressed="true"] { color:white; background:#00876d; border-color:#00876d; }
+body[data-view="mechanical"] .viewer-toolbar { grid-column:1/-1; padding:8px 0 12px; flex-wrap:wrap; gap:8px; border:0; }
+body[data-view="mechanical"] .viewer-toolbar select { max-width:100%; min-width:0; flex:1; }
+body[data-view="mechanical"] #canvas { grid-column:1; grid-row:3; height:530px; min-height:380px; border-radius:10px; overflow:hidden; }
+body[data-view="mechanical"] .mechanical-controls { grid-column:2; grid-row:3; display:flex; flex-direction:column; align-items:stretch; gap:12px; min-width:0; max-height:530px; padding:14px; background:#f8fbfa; border:1px solid #e6eeeb; border-radius:10px; }
+body[data-view="mechanical"] .explode-control { display:flex; flex-wrap:wrap; gap:8px; font-size:12px; }
+body[data-view="mechanical"] .explode-control input { width:100%; min-width:0; }
+body[data-view="mechanical"] .part-list { display:flex; flex-direction:column; gap:10px; overflow:auto; max-height:none; flex:1; min-height:80px; }
+body[data-view="mechanical"] .part-toggle { white-space:normal; overflow-wrap:anywhere; align-items:flex-start; font-size:12px; }
+body[data-view="mechanical"] .part-toggle input { accent-color:#00876d; flex-shrink:0; margin-top:2px; }
+.mechanical-parts-heading { display:grid; gap:7px; font-size:13px; }
+.mechanical-parts-heading>div { display:flex; gap:10px; }
+.mechanical-parts-heading .text-button { font-size:11px; }
+#mechanical-part-search { width:100%; min-width:0; padding:8px; border:1px solid #dce7e3; border-radius:7px; font-size:12px; }
+body[data-view="mechanical"] .viewer-footer { grid-column:1/-1; flex-wrap:wrap; padding:12px 0 0; gap:8px; border:0; }
+#mechanical-actions .button { margin-top:10px; justify-content:center; white-space:normal; }
+body[data-view="mechanical"] .mechanical-parameter-grid { border:0; background:none; padding:0; gap:10px; grid-template-columns:repeat(auto-fit,minmax(min(140px,100%),1fr)); }
+body[data-view="mechanical"] .mechanical-color-grid { grid-template-columns:repeat(auto-fill,minmax(min(125px,100%),1fr)); }
+body[data-view="mechanical"] .mechanical-parameter-grid label { font-size:12px; padding:10px; background:#f7faf9; gap:8px; }
+body[data-view="mechanical"] .mechanical-parameter-grid input[type=color] { height:34px; padding:3px; background:white; }
+body[data-view="mechanical"] .mechanical-parameter-grid label:focus-within { border-color:#00876d; }
+.mechanical-color-tools { display:flex; gap:7px; margin-bottom:12px; flex-wrap:wrap; }
+.mechanical-color-tools input { flex:1; min-width:120px; padding:8px 10px; border:1px solid #e0e9e5; border-radius:7px; font:inherit; font-size:12px; }
+.mechanical-color-tools .button { padding:6px 10px; font-size:12px; }
+.mechanical-color-tools [aria-pressed="true"] { background:#def5ec; color:#00775e; }
+body[data-view="mechanical"] .color-list { grid-template-columns:1fr; }
+body[data-view="mechanical"] .color-list label { grid-template-columns:minmax(0,1fr) 90px; align-items:center; }
+.mechanical-feature-list { max-height:220px; overflow:auto; padding-left:28px; font-size:12px; }
+.mechanical-edit-footer { display:flex; flex-wrap:wrap; align-items:center; gap:10px; padding-top:12px; border-top:1px solid #e6eeea; }
+.mechanical-edit-footer>span { flex:1; min-width:160px; }
+@media(max-width:1250px) {
+  body[data-view="mechanical"] #viewer-panel { grid-template-columns:minmax(0,1fr); }
+  body[data-view="mechanical"] .mechanical-controls { grid-column:1; grid-row:4; max-height:260px; margin-top:12px; }
+  body[data-view="mechanical"] .part-list { display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); }
+  .mechanical-metrics { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media(max-width:600px) {
+  body[data-view="mechanical"] #viewer-panel { padding:10px; }
+  body[data-view="mechanical"] #canvas { height:390px; min-height:320px; }
+  .mechanical-metrics { gap:8px; }
+  .mechanical-metrics>div { padding:10px; }
+  .mechanical-metrics strong { font-size:14px; }
+  .mechanical-edit-footer .button { flex:1; padding:9px; }
+}

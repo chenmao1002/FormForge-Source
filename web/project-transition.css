@@ -1,0 +1,13 @@
+/* Keep navigation available while isolating the old project content. */
+#workspace{position:relative}
+.project-transition{position:absolute;inset:74px 0 0;z-index:20;min-height:320px;display:flex;align-items:flex-start;justify-content:center;padding:clamp(40px,12vh,140px) 24px;background:var(--bg,#f5f7f6)}
+.project-transition[hidden]{display:none}
+.project-transition-card{text-align:center;max-width:480px;width:100%;padding:32px;border:1px solid var(--border,#dce5df);border-radius:18px;background:var(--surface,#fff);box-shadow:0 12px 40px #183b2710}
+.project-transition-card h2{font-size:20px;margin:16px 0 12px}
+#project-transition-name{font-weight:600;overflow-wrap:anywhere}
+#project-transition-detail{font-size:14px;color:var(--muted,#64756b);line-height:1.7}
+.project-loading-mark{display:inline-block;font-size:36px;color:#357b5b;animation:project-pulse 1.2s ease-in-out infinite}
+.project-loading .content-layout,.project-loading .page-heading,.project-loading #schematic-navigation{visibility:hidden}
+@keyframes project-pulse{50%{opacity:.35;transform:scale(.85)}}
+@media(prefers-reduced-motion:reduce){.project-loading-mark{animation:none}}
+@media(max-width:760px){.project-transition{inset:70px 0 0;padding:32px 16px}}

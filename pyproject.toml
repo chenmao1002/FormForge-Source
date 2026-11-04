@@ -1,0 +1,10 @@
+[project]
+name = "formforge"
+version = "0.37.1"
+description = "Local product engineering workbench for agents"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "--basetemp=.test-temp"

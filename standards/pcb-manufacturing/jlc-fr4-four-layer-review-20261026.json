@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "id": "jlc-fr4-four-layer-review-20261026",
+  "status": "proposed-explicit-profile",
+  "process": "FR4 four copper layers, nominal1.6mm, CNC routed outline, ordinary plated through holes",
+  "sources": [
+    {
+      "url": "https://www.jlc.com/portal/vtechnology.html",
+      "retrievedAt": "2026-10-26",
+      "sha256": "8f6b25da5269532dacae10e965992ac0a1e21ffdf59f5e1a584d2b0f0808e8de",
+      "bytes": 158512
+    },
+    {
+      "url": "https://www.jlc.com/portal/1/serviceGuide",
+      "retrievedAt": "2026-10-26",
+      "sha256": "9a18a07280b6c20ce2e42d8fe2f62984363a816f9de50d91efdfc8648e2a768b",
+      "bytes": 191125
+    },
+    {
+      "url": "https://jlcpcb.com/capabilities/pcb-capabilities/",
+      "retrievedAt": "2026-10-26",
+      "sha256": "dd962fb74ea64c04ea756dce4f9ff236971c6609879cc874a09a80c232dd7d13",
+      "bytes": 136443
+    }
+  ],
+  "profileScope": "Software DFM review target, not an upstream OLIMEX process claim or supplier acceptance.",
+  "facts": {
+    "cncCopperEdgeCapabilityMm": 0.2,
+    "cncCopperEdgeRecommendedMm": 0.3,
+    "npthToCopperMinimumMm": 0.2,
+    "viaHoleToCopperMinimumMm": 0.2,
+    "innerPthHoleToCopperMinimumMm": 0.3,
+    "pthAnnularMinimumMm": 0.18,
+    "pthAnnularRecommendedMm": 0.25
+  },
+  "inheritedSource": {
+    "minTrackWidthMm": 0.1524,
+    "minViaDiameterMm": 0.7,
+    "minViaDrillMm": 0.4,
+    "minHoleToHoleMm": 0.3048
+  },
+  "notes": [
+    "No design rule applied by this proposal yet.",
+    "Via drill and component PTH drilling must remain separate concepts.",
+    "Current KiCad template settings and the pinned original project were retained for comparison; errors are not suppressed."
+  ]
+}

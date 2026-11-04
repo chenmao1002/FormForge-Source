@@ -1,0 +1,24 @@
+#orders-panel h2{font-size:16px}
+#orders-panel p{line-height:1.7;overflow-wrap:anywhere}
+#orders-panel .field-note{font-size:12px;line-height:1.7;color:#64756b;margin:10px 0}
+#orders-panel .text-button{font-size:12px;padding:7px 5px}
+#orders-panel .badge{font-size:11px;white-space:normal}
+#orders-panel .order-toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:16px 0 20px}
+#orders-panel .order-toolbar select{min-width:0;flex:1;font-size:12px}
+#orders-panel .order-heading{margin-bottom:5px;flex-wrap:wrap;font-size:15px}
+#orders-panel .order-parameters{font-size:13px;color:#405b50;margin:14px 0}
+#orders-panel .order-status-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:16px 0;background:#f4f7f1;border:1px solid #e0e7da;border-radius:7px;padding:14px 12px}
+#orders-panel .order-status-grid span{display:block;font-size:12px;color:#617368;margin-bottom:7px}
+#orders-panel .order-status-grid strong{display:block;font-size:15px;font-weight:600;overflow-wrap:anywhere}
+#orders-panel .order-cost{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin:18px 0 0;font-size:12px;color:#536a5c}
+#orders-panel .order-cost strong{font-size:24px;font-weight:600;color:#234d43;font-variant-numeric:tabular-nums}
+#orders-panel .order-provider-label{font-size:12px;color:#536a5c}
+#orders-panel .order-details{border-top:1px solid #e2e8dd;padding:13px 0;font-size:12px}
+#orders-panel .order-details summary{cursor:pointer;font-size:13px;color:#3f6052;line-height:1.7}
+#orders-panel .order-details p{font-size:12px}
+#orders-panel .library-digest{display:block;font-size:12px;color:#627569;white-space:normal;overflow-wrap:anywhere;margin:12px 0}
+#orders-panel .document-downloads{display:flex;flex-wrap:wrap;gap:9px;margin:12px 0}
+#orders-panel .order-history-toolbar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;color:#64756b;font-size:12px;margin:14px 0}
+#orders-panel .order-observation{padding:16px 0;border-top:1px solid #e4e9de}
+#orders-panel .order-observation h3{font-size:13px;line-height:1.6;margin:0 0 8px}
+@media(max-width:1100px){#orders-panel .order-status-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}

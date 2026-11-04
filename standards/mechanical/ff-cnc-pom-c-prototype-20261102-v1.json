@@ -1,0 +1,21 @@
+{
+  "kind": "process-profile",
+  "id": "ff-cnc-pom-c-prototype-20261102-v1",
+  "version": 1,
+  "provider": "project-prototype-contract",
+  "process": "CNC",
+  "materials": ["POM-C"],
+  "units": "mm",
+  "reviewedAt": "2026-11-02",
+  "sources": [{"url": "urn:formforge:gamepad-A:cnc-pom-c-prototype-working-contract-v1", "use": "Agent-selected prototype working allocations. Not a supplier capability, material-grade certificate, quote or load approval."}],
+  "wallByMaxPartSpan": [[1000, 1.0]],
+  "featureWallMin": 0.6,
+  "featureWallBasis": "Local unloaded retaining rims and slot lips only; load shoulder uses the separate 1.0mm wall allocation. Actual tool radius, dimensional tolerance, creep and strength require shop/sample qualification.",
+  "staticGapMin": 0.1,
+  "movingGapMin": 0.5,
+  "clearanceConvention": "Nominal one-sided gap, not a finished tolerance guarantee.",
+  "headBearingWorkingFractionMin": 0.5,
+  "headBearingWorkingBasis": "Nominal geometric filter only; set screws use declared pressure contact instead of fictitious head bearing.",
+  "modelTolerance": {"limitMm": 100, "belowLimitMm": 0.05, "aboveLimitFraction": 0.001},
+  "notes": ["POM-C is an Agent-selected material family; exact grade, supplier and certificate remain unspecified.", "No SLA profile or printed polymer thread is used for this CNC cap. Finish is machined/deburred with no coating in fits.", "These are prototype drawing allocations. No torque, friction, axial pull retention, fatigue or manufacturing release is claimed."]
+}

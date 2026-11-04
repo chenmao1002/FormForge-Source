@@ -1,0 +1,21 @@
+{
+  "name": "formforge-workbench",
+  "version": "0.37.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-web.mjs",
+    "check": "tsc --noEmit",
+    "desktop": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/Start-Desktop.ps1",
+    "desktop:setup": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/Setup-Desktop.ps1",
+    "desktop:test": "node --test desktop/tests/policy.test.cjs"
+  },
+  "dependencies": {
+    "three": "0.186.1"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2",
+    "typescript": "5.9.3",
+    "@types/three": "0.183.1"
+  }
+}

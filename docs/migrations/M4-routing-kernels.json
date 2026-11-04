@@ -1,0 +1,24 @@
+{
+  "sourceCommit": "1b89210fc073fab48d5a11bc23db49c82d92c047",
+  "files": [
+    {
+      "source": "local-source/PCB_mode/vendor/router_snapshot_v2/workers/circuit_grid_legality.py",
+      "sourceSha256": "6451c65edb71d2b0a77dcac22cf37b34e16af5fdf55552b10bc37e56b250d101",
+      "selectedFunction": "entire module",
+      "blockSha256": "6451c65edb71d2b0a77dcac22cf37b34e16af5fdf55552b10bc37e56b250d101",
+      "destination": "src/formforge/adapters/route_legality.py",
+      "sha256": "093f6e9768f6a413ae594f72de8c170031af40ab448c55b0764f8c192ab61099",
+      "license": "No independent license located in source root; local authorized reuse only."
+    },
+    {
+      "source": "local-source/PCB_mode/vendor/router_snapshot_v2/workers/kicad_compat.py",
+      "sourceSha256": "9df003a38c47698c1a75cc5585e4326d2de7559bc55c3cc4763468cd6d82f03d",
+      "selectedFunction": "configure_native_asserts",
+      "blockSha256": "4581490033c3a54d5cbc469ee7b7010f8ffd64af2d7520adc53a0a795c4c59b0",
+      "destination": "src/formforge/adapters/native_asserts.py",
+      "sha256": "bd5c299560597749e83c3e337af88130abdafb34ef48a86fc91d5267bd59be97",
+      "license": "No independent license located in source root; local authorized reuse only."
+    }
+  ],
+  "oldProjectReadOnly": true
+}

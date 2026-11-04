@@ -1,0 +1,25 @@
+{
+  "source": "local-source/Product_IDE_SCH/workers/native_schematic_builder.py",
+  "sourceCommit": "69959c1f2fbedd24dcf18aeecc6d278da9917193",
+  "sourceSha256": "bda2ca8c7ae83bfb9fd0eb4d8a5b9a2b348241fdd1ff71b1716efce38dccec6f",
+  "repositoryHasLocalChanges": true,
+  "sourceFileHasLocalChanges": false,
+  "destination": "src/formforge/adapters/native_syntax.py",
+  "destinationSha256": "46cb6872c6e176930d41950cd8793804207658eef603e316010e56c380a8fd35",
+  "ranges": [
+    {
+      "name": "Node",
+      "startLine": 53,
+      "endLine": 72,
+      "sha256": "7e27d2ef730a218c9a5c6a94b0e31f4048d14bd672cabc6c34bee95cf2a6a6c8"
+    },
+    {
+      "name": "parse",
+      "startLine": 75,
+      "endLine": 98,
+      "sha256": "85994e280d4d72b67ba07736654f48519cae920478bc7234ff08e38def7607b7"
+    }
+  ],
+  "purpose": "Preserve unknown KiCad fields and untouched source bytes during UUID-targeted edits",
+  "license": "No standalone LICENSE found at source root. User-authorized local migration; original attribution retained, no new redistribution license asserted."
+}

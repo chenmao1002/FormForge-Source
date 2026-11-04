@@ -1,0 +1,15 @@
+{
+  "name": "formforge-desktop-preview",
+  "version": "0.24.1",
+  "private": true,
+  "description": "FormForge Electron quotation preview; preserves the local HTML workbench and service",
+  "main": "main.cjs",
+  "scripts": {
+    "start": "electron main.cjs",
+    "test": "node --test tests/policy.test.cjs",
+    "test:integration": "node tests/electron-fixture.cjs"
+  },
+  "devDependencies": {
+    "electron": "45.0.0"
+  }
+}

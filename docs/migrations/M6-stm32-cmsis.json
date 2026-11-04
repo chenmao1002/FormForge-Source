@@ -1,0 +1,247 @@
+{
+  "files": [
+    {
+      "destination": "vendor/firmware/stm32/g0/stm32g030xx.h",
+      "sha256": "9af2b7c64ebe6cbe486f8a5672c7e6f2f08c23cd5d24962c138205b1a49b833b",
+      "sourceUri": "https://raw.githubusercontent.com/STMicroelectronics/cmsis-device-g0/f576c24e123edf3332988ecd49512c0f35f85186/Include/stm32g030xx.h",
+      "version": "v1.4.5",
+      "commit": "f576c24e123edf3332988ecd49512c0f35f85186",
+      "license": "Apache-2.0 (ST bundled license)",
+      "purpose": "Exact STM32 target CMSIS compilation and interrupt layout; no HAL"
+    },
+    {
+      "destination": "vendor/firmware/stm32/g0/stm32g071xx.h",
+      "sha256": "0b19058af668cff72649ae3871f6729b0fa68c6e81794cefbd1b0d63e0943fb3",
+      "sourceUri": "https://raw.githubusercontent.com/STMicroelectronics/cmsis-device-g0/f576c24e123edf3332988ecd49512c0f35f85186/Include/stm32g071xx.h",
+      "version": "v1.4.5",
+      "commit": "f576c24e123edf3332988ecd49512c0f35f85186",
+      "license": "Apache-2.0 (ST bundled license)",
+      "purpose": "Exact STM32 target CMSIS compilation and interrupt layout; no HAL"
+    },
+    {
+      "destination": "vendor/firmware/stm32/g0/LICENSE.md",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "sourceUri": "https://raw.githubusercontent.com/STMicroelectronics/cmsis-device-g0/f576c24e123edf3332988ecd49512c0f35f85186/LICENSE.md",
+      "version": "v1.4.5",
+      "commit": "f576c24e123edf3332988ecd49512c0f35f85186",
+      "license": "Apache-2.0 (ST bundled license)",
+      "purpose": "Exact STM32 target CMSIS compilation and interrupt layout; no HAL"
+    },
+    {
+      "destination": "vendor/firmware/stm32/f1/stm32f103xb.h",
+      "sha256": "d9c7c613d9fea74220892b4fbc3e80617493acad82a04bafadab2b4a7198399c",
+      "sourceUri": "https://raw.githubusercontent.com/STMicroelectronics/cmsis-device-f1/8a76309ed1250d817e9c888c4417171d2ba3ba63/Include/stm32f103xb.h",
+      "version": "v4.3.5",
+      "commit": "8a76309ed1250d817e9c888c4417171d2ba3ba63",
+      "license": "Apache-2.0 (ST bundled license)",
+      "purpose": "Exact STM32 target CMSIS compilation and interrupt layout; no HAL"
+    },
+    {
+      "destination": "vendor/firmware/stm32/f1/stm32f103xe.h",
+      "sha256": "2104082df11b7e172ecf85461a72689b849e05b222a573e3cae0b2ab279800c3",
+      "sourceUri": "https://raw.githubusercontent.com/STMicroelectronics/cmsis-device-f1/8a76309ed1250d817e9c888c4417171d2ba3ba63/Include/stm32f103xe.h",
+      "version": "v4.3.5",
+      "commit": "8a76309ed1250d817e9c888c4417171d2ba3ba63",
+      "license": "Apache-2.0 (ST bundled license)",
+      "purpose": "Exact STM32 target CMSIS compilation and interrupt layout; no HAL"
+    },
+    {
+      "destination": "vendor/firmware/stm32/f1/License.md",
+      "sha256": "b645e89bbfb6accf914cf7adca011712bf90055391fdd55f2af6439d98aa36d4",
+      "sourceUri": "https://raw.githubusercontent.com/STMicroelectronics/cmsis-device-f1/8a76309ed1250d817e9c888c4417171d2ba3ba63/License.md",
+      "version": "v4.3.5",
+      "commit": "8a76309ed1250d817e9c888c4417171d2ba3ba63",
+      "license": "Apache-2.0 (ST bundled license)",
+      "purpose": "Exact STM32 target CMSIS compilation and interrupt layout; no HAL"
+    },
+    {
+      "destination": "vendor/firmware/stm32/f4/stm32f401xc.h",
+      "sha256": "8c35c81caf948840027795fafd7ffa550455bacb6a675ed8f82ba7a06ec733f0",
+      "sourceUri": "https://raw.githubusercontent.com/STMicroelectronics/cmsis-device-f4/5f41fb29d22773896c780052bf61e47fc924d524/Include/stm32f401xc.h",
+      "version": "v2.6.10",
+      "commit": "5f41fb29d22773896c780052bf61e47fc924d524",
+      "license": "Apache-2.0 (ST bundled license)",
+      "purpose": "Exact STM32 target CMSIS compilation and interrupt layout; no HAL"
+    },
+    {
+      "destination": "vendor/firmware/stm32/f4/stm32f411xe.h",
+      "sha256": "db64e4d1dccfcae0e8ea1618ad372ca88c8367f1f93f21b2083701dedec2f3cb",
+      "sourceUri": "https://raw.githubusercontent.com/STMicroelectronics/cmsis-device-f4/5f41fb29d22773896c780052bf61e47fc924d524/Include/stm32f411xe.h",
+      "version": "v2.6.10",
+      "commit": "5f41fb29d22773896c780052bf61e47fc924d524",
+      "license": "Apache-2.0 (ST bundled license)",
+      "purpose": "Exact STM32 target CMSIS compilation and interrupt layout; no HAL"
+    },
+    {
+      "destination": "vendor/firmware/stm32/f4/stm32f407xx.h",
+      "sha256": "6c7050bc45a952d63a367020a6568b1ab039c040dd3c0ba181b703342a11a3c8",
+      "sourceUri": "https://raw.githubusercontent.com/STMicroelectronics/cmsis-device-f4/5f41fb29d22773896c780052bf61e47fc924d524/Include/stm32f407xx.h",
+      "version": "v2.6.10",
+      "commit": "5f41fb29d22773896c780052bf61e47fc924d524",
+      "license": "Apache-2.0 (ST bundled license)",
+      "purpose": "Exact STM32 target CMSIS compilation and interrupt layout; no HAL"
+    },
+    {
+      "destination": "vendor/firmware/stm32/f4/LICENSE.md",
+      "sha256": "dadb755f51d36614173b28c5790cb4a991e8f4cc822e5b634fd66a4f4145824d",
+      "sourceUri": "https://raw.githubusercontent.com/STMicroelectronics/cmsis-device-f4/5f41fb29d22773896c780052bf61e47fc924d524/LICENSE.md",
+      "version": "v2.6.10",
+      "commit": "5f41fb29d22773896c780052bf61e47fc924d524",
+      "license": "Apache-2.0 (ST bundled license)",
+      "purpose": "Exact STM32 target CMSIS compilation and interrupt layout; no HAL"
+    },
+    {
+      "destination": "vendor/firmware/stm32/core/core_cm3.h",
+      "sha256": "c9937781259a8897adf514445441c68570087d6a72a558d8a4afe75cdb62dbd2",
+      "sourceUri": "https://raw.githubusercontent.com/ARM-software/CMSIS_5/2b7495b8535bdcb306dac29b9ded4cfb679d7e5c/CMSIS/Core/Include/core_cm3.h",
+      "version": "5.9.0",
+      "commit": "2b7495b8535bdcb306dac29b9ded4cfb679d7e5c",
+      "license": "Apache-2.0",
+      "purpose": "Exact STM32 target CMSIS compilation and interrupt layout; no HAL"
+    },
+    {
+      "destination": "vendor/firmware/stm32/core/core_cm4.h",
+      "sha256": "f5b63d52dd1557b15ca414cb59c264f595a7b5669db2a5878dffe22f4caedc8c",
+      "sourceUri": "https://raw.githubusercontent.com/ARM-software/CMSIS_5/2b7495b8535bdcb306dac29b9ded4cfb679d7e5c/CMSIS/Core/Include/core_cm4.h",
+      "version": "5.9.0",
+      "commit": "2b7495b8535bdcb306dac29b9ded4cfb679d7e5c",
+      "license": "Apache-2.0",
+      "purpose": "Exact STM32 target CMSIS compilation and interrupt layout; no HAL"
+    },
+    {
+      "destination": "vendor/firmware/stm32/core/mpu_armv7.h",
+      "sha256": "29206b52ee02290ed6f5a5415ebd4187de802cf176d9b3cb844390d8e5571372",
+      "sourceUri": "https://raw.githubusercontent.com/ARM-software/CMSIS_5/2b7495b8535bdcb306dac29b9ded4cfb679d7e5c/CMSIS/Core/Include/mpu_armv7.h",
+      "version": "5.9.0",
+      "commit": "2b7495b8535bdcb306dac29b9ded4cfb679d7e5c",
+      "license": "Apache-2.0",
+      "purpose": "Exact STM32 target CMSIS compilation and interrupt layout; no HAL"
+    },
+    {
+      "destination": "vendor/firmware/stm32/core/cmsis_version.h",
+      "sha256": "184c19fd3ee73632edf35a0b4d49cd48be75fbf49e6ccb19d9db05fa83bea4b3",
+      "sourceUri": "https://raw.githubusercontent.com/ARM-software/CMSIS_5/2b7495b8535bdcb306dac29b9ded4cfb679d7e5c/CMSIS/Core/Include/cmsis_version.h",
+      "version": "5.9.0",
+      "commit": "2b7495b8535bdcb306dac29b9ded4cfb679d7e5c",
+      "license": "Apache-2.0",
+      "purpose": "Exact STM32 target CMSIS compilation and interrupt layout; no HAL"
+    },
+    {
+      "destination": "vendor/firmware/stm32/core/cmsis_gcc.h",
+      "sha256": "43bfd1fe69fbbc2ca70aaf7d43cc3e20f16e0c7f66e1bdef9b51af6dc14b2617",
+      "sourceUri": "https://raw.githubusercontent.com/ARM-software/CMSIS_5/2b7495b8535bdcb306dac29b9ded4cfb679d7e5c/CMSIS/Core/Include/cmsis_gcc.h",
+      "version": "5.9.0",
+      "commit": "2b7495b8535bdcb306dac29b9ded4cfb679d7e5c",
+      "license": "Apache-2.0",
+      "purpose": "Exact STM32 target CMSIS compilation and interrupt layout; no HAL"
+    },
+    {
+      "destination": "vendor/firmware/stm32/core/cmsis_compiler.h",
+      "sha256": "b51963d271c1571ca3463654c76aa7ea50c4eac5d0a2710df10414ac64d9e0f8",
+      "sourceUri": "https://raw.githubusercontent.com/ARM-software/CMSIS_5/2b7495b8535bdcb306dac29b9ded4cfb679d7e5c/CMSIS/Core/Include/cmsis_compiler.h",
+      "version": "5.9.0",
+      "commit": "2b7495b8535bdcb306dac29b9ded4cfb679d7e5c",
+      "license": "Apache-2.0",
+      "purpose": "Exact STM32 target CMSIS compilation and interrupt layout; no HAL"
+    },
+    {
+      "destination": "vendor/firmware/stm32/core/LICENSE.txt",
+      "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1",
+      "sourceUri": "https://raw.githubusercontent.com/ARM-software/CMSIS_5/2b7495b8535bdcb306dac29b9ded4cfb679d7e5c/LICENSE.txt",
+      "version": "5.9.0",
+      "commit": "2b7495b8535bdcb306dac29b9ded4cfb679d7e5c",
+      "license": "Apache-2.0",
+      "purpose": "Exact STM32 target CMSIS compilation and interrupt layout; no HAL"
+    },
+    {
+      "destination": "vendor/firmware/stm32/pins.json",
+      "sha256": "73c91914a21d1af11b33af1e4c3ea2fd8d6d661ad6defe13242838decf081f36",
+      "sourceUri": "https://gitlab.com/kicad/libraries/kicad-symbols",
+      "version": "KiCad 10.0.6 installed library",
+      "license": "CC-BY-SA-4.0 with KiCad library exception",
+      "purpose": "Exact symbol pin contracts",
+      "sources": [
+        {
+          "source": "local-source/MCU_ST_STM32G0.kicad_sym",
+          "sha256": "596ca3c92438ef06fd7ea9aefcd3f110c9c1fc5cd93a911d26e3ccadd875b137",
+          "symbols": [
+            "STM32G030K8Tx",
+            "STM32G071KBTxN"
+          ],
+          "sourceUri": "https://gitlab.com/kicad/libraries/kicad-symbols",
+          "version": "KiCad 10.0.6 installed library",
+          "license": "CC-BY-SA-4.0 with KiCad library exception",
+          "purpose": "Physical pin identity contract only"
+        },
+        {
+          "source": "local-source/MCU_ST_STM32F1.kicad_sym",
+          "sha256": "9dfd6f2b04cd36f7f5a6c7dcaab8971130df1fd9fee24a6f94cfcfd37262a873",
+          "symbols": [
+            "STM32F103C8Tx",
+            "STM32F103RCTx"
+          ],
+          "sourceUri": "https://gitlab.com/kicad/libraries/kicad-symbols",
+          "version": "KiCad 10.0.6 installed library",
+          "license": "CC-BY-SA-4.0 with KiCad library exception",
+          "purpose": "Physical pin identity contract only"
+        },
+        {
+          "source": "local-source/MCU_ST_STM32F4.kicad_sym",
+          "sha256": "e604469d246ac8b906ced0674883d4d587045b889fde8c2dd4a292f35b0dd7d6",
+          "symbols": [
+            "STM32F401CCUx",
+            "STM32F411CEUx",
+            "STM32F407VGTx"
+          ],
+          "sourceUri": "https://gitlab.com/kicad/libraries/kicad-symbols",
+          "version": "KiCad 10.0.6 installed library",
+          "license": "CC-BY-SA-4.0 with KiCad library exception",
+          "purpose": "Physical pin identity contract only"
+        }
+      ]
+    },
+    {
+      "destination": "vendor/firmware/stm32/f1/system_stm32f1xx.h",
+      "sha256": "a54dfbb3480c672f532d472a6e84bcf34df6551771d2e9966c5a3503c676b6ab",
+      "sourceUri": "https://raw.githubusercontent.com/STMicroelectronics/cmsis-device-f1/8a76309ed1250d817e9c888c4417171d2ba3ba63/Include/system_stm32f1xx.h",
+      "version": "v4.3.5",
+      "commit": "8a76309ed1250d817e9c888c4417171d2ba3ba63",
+      "license": "Apache-2.0 (ST bundled license)",
+      "purpose": "Exact STM32 target CMSIS compilation and interrupt layout; no HAL"
+    },
+    {
+      "destination": "vendor/firmware/stm32/f4/system_stm32f4xx.h",
+      "sha256": "02c067d5a135f540c03215dc834b1e60a97bbd4e55bfd3994b0c82a15ea3012a",
+      "sourceUri": "https://raw.githubusercontent.com/STMicroelectronics/cmsis-device-f4/5f41fb29d22773896c780052bf61e47fc924d524/Include/system_stm32f4xx.h",
+      "version": "v2.6.10",
+      "commit": "5f41fb29d22773896c780052bf61e47fc924d524",
+      "license": "Apache-2.0 (ST bundled license)",
+      "purpose": "Exact STM32 target CMSIS compilation and interrupt layout; no HAL"
+    },
+    {
+      "destination": "vendor/firmware/stm32/g071-pin-data/STM32G071C(6-8-B)Tx.xml",
+      "sha256": "17d2959513d09d2dfeb76d8cc3a891841694abf044b3add37185f8c4e972a885",
+      "sourceUri": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32G071C(6-8-B)Tx.xml",
+      "version": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
+      "license": "ST open pin data license retained alongside XML",
+      "purpose": "Review exact G071CB package pin identity"
+    },
+    {
+      "destination": "vendor/firmware/stm32/g071-pin-data/LICENSE",
+      "sha256": "2e80479026d27db007f8bdd190860e4b0452ca30d622ef4c04084b064418a096",
+      "sourceUri": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/LICENSE",
+      "version": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
+      "license": "ST open pin data license retained alongside XML",
+      "purpose": "Review exact G071CB package pin identity"
+    },
+    {
+      "destination": "vendor/firmware/stm32/g071cb.kicad_sym",
+      "sha256": "299559a062ae164fd42fba7985b1e71e0d4dc46c9128f55d6a6f10226f4ea301",
+      "sourceUri": "https://gitlab.com/kicad/libraries/kicad-symbols",
+      "version": "KiCad 10.0.6 G081CB layout; ST G071CB pin-data review",
+      "license": "CC-BY-SA-4.0 with KiCad library exception",
+      "purpose": "G071CB native symbol; G081-only aliases removed",
+      "sourceLibrarySha256": "596ca3c92438ef06fd7ea9aefcd3f110c9c1fc5cd93a911d26e3ccadd875b137"
+    }
+  ]
+}

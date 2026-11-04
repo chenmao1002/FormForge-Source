@@ -1,0 +1,214 @@
+{
+  "id": "product-ide-3d-headless-20261019",
+  "version": "audited source snapshot 2026-10-19",
+  "sourceRoot": "local-source/Product_IDE_3D",
+  "license": "MIT; bundled fonts SIL OFL1.1",
+  "purpose": "Isolated deterministic CAD/schema/export/verification; no CLI or LLM planning",
+  "moduleCount": 28,
+  "files": [
+    {
+      "source": "local-source/Product_IDE_3D/src/product_ide_3d/__init__.py",
+      "destination": "vendor/mechanical/product_ide_3d/__init__.py",
+      "sha256": "7a54cc666313c9d462d17c23c79e5e2982c5d697112b9fdc51a25cdb22f92468",
+      "size": 90
+    },
+    {
+      "source": "local-source/Product_IDE_3D/src/product_ide_3d/_worker.py",
+      "destination": "vendor/mechanical/product_ide_3d/_worker.py",
+      "sha256": "446ed52cfe2913254334d41ff75ee9143d6c855b80e648d0c091fb6d76616134",
+      "size": 1276
+    },
+    {
+      "source": "local-source/Product_IDE_3D/src/product_ide_3d/annotation_layout.py",
+      "destination": "vendor/mechanical/product_ide_3d/annotation_layout.py",
+      "sha256": "17d1f4b1d55c4f952f96dce4b22546635cd651ca33e8736050b60e3eb673d176",
+      "size": 4849
+    },
+    {
+      "source": "local-source/Product_IDE_3D/src/product_ide_3d/arm_cad.py",
+      "destination": "vendor/mechanical/product_ide_3d/arm_cad.py",
+      "sha256": "772aa0aa636dd80b75f73f49b1e74d63fb94160cfddcd161688a5880afcf9f49",
+      "size": 14132
+    },
+    {
+      "source": "local-source/Product_IDE_3D/src/product_ide_3d/arm_delivery.py",
+      "destination": "vendor/mechanical/product_ide_3d/arm_delivery.py",
+      "sha256": "1ffdf6e8fefb0a5a1c928d016b3b4d4b5e97be0374c7726116680e42d203ebfa",
+      "size": 10230
+    },
+    {
+      "source": "local-source/Product_IDE_3D/src/product_ide_3d/arm_drawings.py",
+      "destination": "vendor/mechanical/product_ide_3d/arm_drawings.py",
+      "sha256": "ab3abea14969eb6ad072eaa965afbf862ae596077c33359e589d961fbb579c57",
+      "size": 4819
+    },
+    {
+      "source": "local-source/Product_IDE_3D/src/product_ide_3d/arm_spec.py",
+      "destination": "vendor/mechanical/product_ide_3d/arm_spec.py",
+      "sha256": "f9ff57124c0a04dae28fc6974fae07d008c53e4d09d83b7140f20aa2e9d37fc1",
+      "size": 8251
+    },
+    {
+      "source": "local-source/Product_IDE_3D/src/product_ide_3d/arm_viewer.py",
+      "destination": "vendor/mechanical/product_ide_3d/arm_viewer.py",
+      "sha256": "3607a3e1a5e6769cb0ba39c364e4740716f4c872be42b3b62f7442cef64cd584",
+      "size": 25273
+    },
+    {
+      "source": "local-source/Product_IDE_3D/src/product_ide_3d/assembly_cache.py",
+      "destination": "vendor/mechanical/product_ide_3d/assembly_cache.py",
+      "sha256": "0189ae6400c58019fabc41a1dc860c81a3b8031f15266f71467bdd73ae314846",
+      "size": 3407
+    },
+    {
+      "source": "local-source/Product_IDE_3D/src/product_ide_3d/assembly_cad.py",
+      "destination": "vendor/mechanical/product_ide_3d/assembly_cad.py",
+      "sha256": "8c7fe76074494c938af750e949bd91f86935c310babde222d49ef355ca4b9de4",
+      "size": 27076
+    },
+    {
+      "source": "local-source/Product_IDE_3D/src/product_ide_3d/assembly_delivery.py",
+      "destination": "vendor/mechanical/product_ide_3d/assembly_delivery.py",
+      "sha256": "78dca5890c78ad1fb002203fee7f159e3de2a6f8c6234af3b72bf2a4124dc99e",
+      "size": 6313
+    },
+    {
+      "source": "local-source/Product_IDE_3D/src/product_ide_3d/assembly_drawings.py",
+      "destination": "vendor/mechanical/product_ide_3d/assembly_drawings.py",
+      "sha256": "f00fd3adabb35a9edd818b35018edc8bd99294522c98502377b0efcd7f56b1da",
+      "size": 50579
+    },
+    {
+      "source": "local-source/Product_IDE_3D/src/product_ide_3d/assembly_kinematics.py",
+      "destination": "vendor/mechanical/product_ide_3d/assembly_kinematics.py",
+      "sha256": "d0edb8f8c88033060c1af9cb2fa1d06e8ea0825045a3a271961b1cb69c7d0180",
+      "size": 16030
+    },
+    {
+      "source": "local-source/Product_IDE_3D/src/product_ide_3d/assembly_layout_pages.py",
+      "destination": "vendor/mechanical/product_ide_3d/assembly_layout_pages.py",
+      "sha256": "9f7757184e028a5da6ca99e90db74db20c75938e04b1c4de91411bdaffc0bfca",
+      "size": 8853
+    },
+    {
+      "source": "local-source/Product_IDE_3D/src/product_ide_3d/assembly_mass.py",
+      "destination": "vendor/mechanical/product_ide_3d/assembly_mass.py",
+      "sha256": "9567860da68161ad2682edd781288ca128bafcabc570dd2e1595c64afd7d4372",
+      "size": 3598
+    },
+    {
+      "source": "local-source/Product_IDE_3D/src/product_ide_3d/assembly_preflight.py",
+      "destination": "vendor/mechanical/product_ide_3d/assembly_preflight.py",
+      "sha256": "c1733aa84e847972464ab45c7d673f4c9a61b44413c54bafdba708a251e6e9d8",
+      "size": 5553
+    },
+    {
+      "source": "local-source/Product_IDE_3D/src/product_ide_3d/assembly_primitives.py",
+      "destination": "vendor/mechanical/product_ide_3d/assembly_primitives.py",
+      "sha256": "078a4482b6775149ac980f76908ad91ebcd0102baafb357ac4b6f2443f5f1817",
+      "size": 9774
+    },
+    {
+      "source": "local-source/Product_IDE_3D/src/product_ide_3d/assembly_spec.py",
+      "destination": "vendor/mechanical/product_ide_3d/assembly_spec.py",
+      "sha256": "c6ef142e596639f49a7820bd90c20bb58f406779c72560cfee770eae19380693",
+      "size": 23746
+    },
+    {
+      "source": "local-source/Product_IDE_3D/src/product_ide_3d/cad.py",
+      "destination": "vendor/mechanical/product_ide_3d/cad.py",
+      "sha256": "9fca5fab23b3eadaaf489ef9565b62b07a8fbb486310b04e3c806da4202f611e",
+      "size": 16985
+    },
+    {
+      "source": "local-source/Product_IDE_3D/src/product_ide_3d/delivery.py",
+      "destination": "vendor/mechanical/product_ide_3d/delivery.py",
+      "sha256": "5f3d8347af7d998970da446e17f0a1e61f2516dc8609f94345a642a3f454b745",
+      "size": 11360
+    },
+    {
+      "source": "local-source/Product_IDE_3D/src/product_ide_3d/drawing_translations.py",
+      "destination": "vendor/mechanical/product_ide_3d/drawing_translations.py",
+      "sha256": "b572d2acf2d6ad6cb40c62aff644e1c3a84ca97c3327476962098e42e45dd959",
+      "size": 14871
+    },
+    {
+      "source": "local-source/Product_IDE_3D/src/product_ide_3d/drawings.py",
+      "destination": "vendor/mechanical/product_ide_3d/drawings.py",
+      "sha256": "0ddbc15240ed68f79d6d505aafe639abfc7ced4d5bea2f026a9c9acf28244187",
+      "size": 13249
+    },
+    {
+      "source": "local-source/Product_IDE_3D/src/product_ide_3d/geometry.py",
+      "destination": "vendor/mechanical/product_ide_3d/geometry.py",
+      "sha256": "03c2f934d0deab983f0fa3e437c57f145a0096ccfb96ee38af075318d11f48c4",
+      "size": 853
+    },
+    {
+      "source": "local-source/Product_IDE_3D/src/product_ide_3d/glb.py",
+      "destination": "vendor/mechanical/product_ide_3d/glb.py",
+      "sha256": "4ed2bd6dc0477d5ff49bb6c65294466768382bed2497f047893e4cfa74b657a4",
+      "size": 7087
+    },
+    {
+      "source": "local-source/Product_IDE_3D/src/product_ide_3d/localization.py",
+      "destination": "vendor/mechanical/product_ide_3d/localization.py",
+      "sha256": "8c3bac03e148c5105a304adaaad78a851f8d8300a53379829a72fa073219d83a",
+      "size": 9021
+    },
+    {
+      "source": "local-source/Product_IDE_3D/src/product_ide_3d/pdf_fonts.py",
+      "destination": "vendor/mechanical/product_ide_3d/pdf_fonts.py",
+      "sha256": "50344690262f41dd1529d6bebc4f49a612e2032cdf1fd1d9ed5831db1539f600",
+      "size": 2550
+    },
+    {
+      "source": "local-source/Product_IDE_3D/src/product_ide_3d/spec.py",
+      "destination": "vendor/mechanical/product_ide_3d/spec.py",
+      "sha256": "eff796a34155f9f46e3d53376b29980e26c97bfbd67c0570b526bd1a72638eb7",
+      "size": 9062
+    },
+    {
+      "source": "local-source/Product_IDE_3D/src/product_ide_3d/viewer.py",
+      "destination": "vendor/mechanical/product_ide_3d/viewer.py",
+      "sha256": "9f927ba18e5ab011773f68c7bfcc0cd6d78c7d59a9c581fd29d5c77f9286f50b",
+      "size": 25494
+    },
+    {
+      "source": "local-source/Product_IDE_3D/src/product_ide_3d/assets/fonts/font-provenance.json",
+      "destination": "vendor/mechanical/product_ide_3d/assets/fonts/font-provenance.json",
+      "sha256": "63ca1c4389d90fdfae11738533a602daf50fccb9eeebe2cbba981376082b27c4",
+      "size": 1245
+    },
+    {
+      "source": "local-source/Product_IDE_3D/src/product_ide_3d/assets/fonts/OFL.txt",
+      "destination": "vendor/mechanical/product_ide_3d/assets/fonts/OFL.txt",
+      "sha256": "ea7155bae3d6079d0e3c9dba24bc8d447ec666877d695e33be8379e5091c152a",
+      "size": 4386
+    },
+    {
+      "source": "local-source/Product_IDE_3D/src/product_ide_3d/assets/fonts/ProductIDE3DSansSC-Bold.ttf",
+      "destination": "vendor/mechanical/product_ide_3d/assets/fonts/ProductIDE3DSansSC-Bold.ttf",
+      "sha256": "4bbb5cf83f1adcfef1af8b095154e3ef02ab7ab39428e7260da1399c92731838",
+      "size": 10585896
+    },
+    {
+      "source": "local-source/Product_IDE_3D/src/product_ide_3d/assets/fonts/ProductIDE3DSansSC-Regular.ttf",
+      "destination": "vendor/mechanical/product_ide_3d/assets/fonts/ProductIDE3DSansSC-Regular.ttf",
+      "sha256": "97b1f3f9f8d19333b73c61c36d152a47355cec1ed08b3df270160c0ee9b0697e",
+      "size": 10596376
+    },
+    {
+      "source": "local-source/Product_IDE_3D/src/product_ide_3d/assets/fonts/README.md",
+      "destination": "vendor/mechanical/product_ide_3d/assets/fonts/README.md",
+      "sha256": "353dca2ea4c921af90e48836e24e6992edc6d1a9e2eabcbd8676aa30ff3e0fae",
+      "size": 1611
+    },
+    {
+      "source": "local-source/Product_IDE_3D/LICENSE",
+      "destination": "vendor/mechanical/LICENSE",
+      "sha256": "21d61bcb4b59dd4093305c4864b9e4387f5a39b62640658bb26b34b05c977dda",
+      "size": 1084
+    }
+  ]
+}
