@@ -21,5 +21,13 @@
     }
   ],
   "purpose": "Preserve unknown KiCad fields and untouched source bytes during UUID-targeted edits",
-  "license": "No standalone LICENSE found at source root. User-authorized local migration; original attribution retained, no new redistribution license asserted."
+  "license": "GPL-3.0-only",
+  "licenseAtMigration": "No standalone LICENSE found at source root. User-authorized local migration; original attribution retained, no new redistribution license asserted.",
+  "releaseLicense": "GPL-3.0-only",
+  "releaseAuthorization": {
+    "date": "2026-11-04",
+    "copyrightHolder": "chenmao1002",
+    "scope": "Included owner-authored code from earlier projects; third-party components retain their existing licenses.",
+    "statement": "Copyright owner confirmed ownership and authorized publication under GPL-3.0-only."
+  }
 }

@@ -1,6 +1,7 @@
 {
   "name": "formforge-desktop-preview",
   "version": "0.24.1",
+  "license": "GPL-3.0-only",
   "private": true,
   "description": "FormForge Electron quotation preview; preserves the local HTML workbench and service",
   "main": "main.cjs",

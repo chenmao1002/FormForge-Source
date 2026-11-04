@@ -5,16 +5,25 @@
       "destination": "vendor/firmware/kiforge_snapshot/g030_generate.py",
       "sha256": "fb496fe04ab166cd1e06e942b6b86eb2b4940237fc145041ba34a4b1065af505",
       "purpose": "固定模板、启动与链接起点；不执行旧CLI",
-      "license": "User-authorized local reuse; upstream license unspecified"
+      "license": "GPL-3.0-only",
+      "licenseAtMigration": "User-authorized local reuse; upstream license unspecified"
     },
     {
       "source": "local-source/Product_IDE_HEX/kiforge/g030_profile.py",
       "destination": "vendor/firmware/kiforge_snapshot/g030_profile.py",
       "sha256": "ad872a0a7d2e1aa2d1663c1530a2bb279fd7f2eb7180b03a0e6c61298cc70a0b",
       "purpose": "复用精确物理引脚字典；旧review布尔值不能作为实物证据",
-      "license": "User-authorized local reuse; upstream license unspecified"
+      "license": "GPL-3.0-only",
+      "licenseAtMigration": "User-authorized local reuse; upstream license unspecified"
     }
   ],
   "oldProjectModified": false,
-  "scope": "Two source modules and complete native hierarchical KiCad fixture dependencies only; no old environment, credentials, CLI or outputs"
+  "scope": "Two source modules and complete native hierarchical KiCad fixture dependencies only; no old environment, credentials, CLI or outputs",
+  "releaseLicense": "GPL-3.0-only",
+  "releaseAuthorization": {
+    "date": "2026-11-04",
+    "copyrightHolder": "chenmao1002",
+    "scope": "Included owner-authored code from earlier projects; third-party components retain their existing licenses.",
+    "statement": "Copyright owner confirmed ownership and authorized publication under GPL-3.0-only."
+  }
 }

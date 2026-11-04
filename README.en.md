@@ -1,18 +1,30 @@
 # FormForge
 
-**A local engineering workbench where people and AI agents turn electronics ideas into editable, inspectable projects.**
+**Describe what you want. Let an agent help turn it into a real product.**
 
-[中文](README.md) · English
+[中文](README.md) · English · [GPL-3.0](LICENSE)
 
-FormForge brings **requirements, schematics, PCB design, mechanical assemblies, firmware, and manufacturing files** into one project workflow. Use the web interface to inspect designs, adjust supported parameters, and review versions and results. An external AI agent connects through MCP to carry out explicit engineering tasks.
+## Why I am building FormForge
 
-A game controller, for example, needs more than a circuit: button positions, PCB geometry, enclosure fit, firmware pin assignments, and manufacturing files must agree. FormForge links these activities and preserves the engineering files, input versions, and reports behind each result.
+I want making an electronic product to begin with a simple request:
+
+> “I need a game controller.”
+
+From there, an agent would understand the requirements, propose a design, and automatically develop the **schematics, PCB, mechanical structure, and firmware**. It would check how those pieces fit together, then **place orders for PCB fabrication, assembly, and mechanical parts**, taking the design through to manufacturing and delivery.
+
+The experience I am aiming for is simple: **say what you want, and a week later it arrives at your doorstep.**
+
+That is my goal for FormForge: shorten the distance between describing a product and receiving it. This is the complete experience I want to build toward. Today, key design choices, engineering review, and manufacturing still require human involvement, and delivery time depends on the process and supplier.
+
+To work toward that goal, I am bringing **requirements, schematics, PCB design, mechanical assemblies, firmware, and manufacturing files** into one engineering workbench. People can review and adjust designs in the web interface, while an external AI agent calls tools through MCP. Each step produces actual engineering files, revisions, and check results.
+
+I want FormForge to help people turn ideas into physical products and give hardware-agent developers a practical set of engineering tools.
 
 | Game controller assembly | Exploded assembly |
 | --- | --- |
 | ![Game controller CAD assembly with enclosure, sticks, and buttons](docs/images/gamepad-assembled.png) | ![Exploded controller assembly showing the enclosure, PCBA, controls, and fasteners](docs/images/gamepad-exploded.png) |
 
-*The gallery shows CAD models and application screens from design work. The example project files are not bundled with this source repository. Images do not establish physical performance or approval for manufacturing.*
+*Below are examples of my design work in FormForge: assemblies, PCBs, schematics, and the firmware workspace.*
 
 ## What you can do
 
@@ -26,7 +38,7 @@ A game controller, for example, needs more than a circuit: button positions, PCB
 | Prepare manufacturing files | Organize Gerber, BOM, placement, and mechanical files; parse external manufacturing inputs; use supported supplier workflows |
 | Manage projects | Preserve revisions, candidates, tasks, failures, reports, and source provenance; import and export project packages |
 
-The first EDA backend is **KiCad 10**. PCB placement and routing retain FormForge's own implementation. Mechanical modeling uses CadQuery / OpenCascade, and firmware builds use the ARM GNU Toolchain.
+I chose **KiCad 10** as the first EDA backend and kept FormForge's own placement and routing implementation. Mechanical modeling uses CadQuery / OpenCascade, and firmware builds use the ARM GNU Toolchain.
 
 ## From circuits to assemblies and firmware
 
@@ -83,7 +95,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File scripts/Setup.ps1
 powershell -NoProfile -ExecutionPolicy Bypass -File scripts/Start.ps1
 ~~~
 
-Open the [local workbench](http://127.0.0.1:17840), or double-click “启动FormForge.cmd”. The first run creates empty project storage and a new local API token.
+Open the [local workbench](http://127.0.0.1:17840), or double-click “启动FormForge.cmd”.
 
 Install optional modules as needed:
 
@@ -104,11 +116,11 @@ powershell -NoProfile -ExecutionPolicy Bypass -File scripts/Setup-Desktop.ps1
 
 Firmware compilation also requires the ARM GNU Toolchain. Select it in settings or set FORMFORGE_ARM_GCC. For a non-default KiCad installation, set FORMFORGE_KICAD_CLI and FORMFORGE_KICAD_PYTHON. The desktop interface downloads an Electron runtime; the setup script provides a DownloadProxy option for restricted networks.
 
-MCP uses the service's /mcp endpoint with Bearer authentication. The local token is stored in .local/api-token.txt. A stdio bridge is available at scripts/stdio-proxy.py. Use the token only in local client configuration; never commit it.
+MCP uses the service's /mcp endpoint with Bearer authentication. The local token is stored in .local/api-token.txt. A stdio bridge is available at scripts/stdio-proxy.py.
 
 ## Validation status
 
-On November 4, 2026, the source was checked out again from this private repository and installed into four fresh Python environments on the same Windows host:
+On November 4, 2026, I checked out the repository again and installed it into four fresh Python environments on the same Windows host:
 
 - **62 Python and 41 Node targeted checks passed**, covering selected project, native-tool, mechanical, manufacturing-file, offline-flashing, and browser-policy flows.
 - **Eight STM32 targets × two templates: 16 real builds passed**, with ELF / HEX / BIN and vector-table checks.
@@ -130,12 +142,10 @@ node --test desktop/tests/*.test.cjs procurement-browser/tests/*.test.cjs
 
 The bundled basic checks cover a subset of the full local acceptance work; the repository does not include all 103 external acceptance cases.
 
-## Data and release status
+## License
 
-Application projects and runtime data are stored locally by default. This repository contains source, dependency declarations, required runtime resources, third-party notices, and selected introduction images. It does not bundle daily project packages, orders, JLC account credentials, browser login state, or caches. Users configure supplier access and sign in locally. Quotation, submission, payment, and production release are separate operations; payment and production release are not automatic.
+I am releasing FormForge under the **GNU General Public License v3.0 (GPL-3.0-only)**. You can use, study, modify, and redistribute it under that license. If you distribute a modified version, you must also meet GPL-3.0's source-availability and licensing requirements.
 
-Keep generated data/, .local/, .cache/, and browser-profile directories private. Do not force-add them to Git.
+See [LICENSE](LICENSE) for the full terms. Third-party code, fonts, and resources retain their applicable licenses; see [Third-party notices](THIRD_PARTY_NOTICES.md).
 
-**This repository remains private. Do not make it public, publish a public release, or create a public mirror without fresh explicit authorization from the owner.**
-
-An open-source license has not yet been selected for the project's own code. Third-party code, fonts, and resources retain their respective licenses. Code ownership and third-party redistribution rights still need review before a public release.
+Issues and pull requests are welcome, whether you are sharing your experience, reporting a problem, or helping improve the project.

@@ -1,6 +1,7 @@
 {
   "name": "formforge-workbench",
   "version": "0.37.1",
+  "license": "GPL-3.0-only",
   "private": true,
   "type": "module",
   "scripts": {

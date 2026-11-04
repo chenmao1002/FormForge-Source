@@ -2,8 +2,8 @@
   "sourceRoot": "local-source/1021C",
   "sourceCommit": "f599e8aa3224ec89ab1168e17b84f4f57dc79281",
   "date": "2026-10-22",
-  "authorization": "User explicitly authorized local reuse of selected 1021C code and workflows.",
-  "license": "UNKNOWN: no applicable source/root license found. User-authorized local reuse only; no redistribution grant asserted.",
+  "authorization": "Copyright owner authorized public release under GPL-3.0-only.",
+  "license": "GPL-3.0-only",
   "files": [
     {
       "source": "local-source/1021C/workers/circuit_component_keepouts.py",
@@ -22,5 +22,14 @@
     "path": "src/formforge/adapters/body_gap.py",
     "sha256": "2f78fd23f48a16f6728caefc63f43cff5c3a0f320688a54c60d0f79b35c3096c"
   },
-  "adaptation": "Pad-gap inference and spatially indexed finite-width native collision idea adapted. Geometry normalized to footprint local coordinates; single closed convex Fab ring clipped to empty pad gap; coverage reasons, footprint UUID, search diagnostics and post-save proof added. Upstream prepare() and protect_spaces(), keepout mutation, old runtime and dependencies not imported."
+  "adaptation": "Pad-gap inference and spatially indexed finite-width native collision idea adapted. Geometry normalized to footprint local coordinates; single closed convex Fab ring clipped to empty pad gap; coverage reasons, footprint UUID, search diagnostics and post-save proof added. Upstream prepare() and protect_spaces(), keepout mutation, old runtime and dependencies not imported.",
+  "licenseAtMigration": "UNKNOWN: no applicable source/root license found. User-authorized local reuse only; no redistribution grant asserted.",
+  "migrationAuthorization": "User explicitly authorized local reuse of selected 1021C code and workflows.",
+  "releaseLicense": "GPL-3.0-only",
+  "releaseAuthorization": {
+    "date": "2026-11-04",
+    "copyrightHolder": "chenmao1002",
+    "scope": "Included owner-authored code from earlier projects; third-party components retain their existing licenses.",
+    "statement": "Copyright owner confirmed ownership and authorized publication under GPL-3.0-only."
+  }
 }

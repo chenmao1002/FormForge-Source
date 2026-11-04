@@ -2,6 +2,8 @@
 name = "formforge"
 version = "0.37.1"
 description = "Local product engineering workbench for agents"
+license = "GPL-3.0-only"
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md"]
 requires-python = ">=3.10"
 
 [tool.pytest.ini_options]

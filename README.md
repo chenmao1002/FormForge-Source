@@ -1,18 +1,30 @@
 # FormForge
 
-**让 AI Agent 与人一起，把电子产品的想法变成可编辑、可检查的工程。**
+**说出你想要的东西，让 Agent 把它变成真实的产品。**
 
-中文 · [English](README.en.md)
+中文 · [English](README.en.md) · [GPL-3.0](LICENSE)
 
-FormForge 是一个运行在本机的产品工程工作台，把**需求、原理图、PCB、机械结构、固件和制造资料**放进同一套工程流程。你可以在网页中查看设计、调整已开放的参数、检查版本和结果；外部 AI Agent 则通过 MCP 调用工程工具，执行明确的设计与检查任务。
+## 我为什么做 FormForge
 
-例如，开发一个游戏手柄，既要设计电路和按键位置，也要考虑 PCB 与外壳的配合、固件引脚及后续制造文件。FormForge 将这些工作关联起来，让每一步都有对应的工程文件、输入版本和检查报告。
+我希望做一个电子产品，可以从这样一句话开始：
+
+> “我需要一个游戏手柄。”
+
+接下来，Agent 理解需求、提出方案，自动完成**原理图、PCB、机械结构和固件开发**，把这些设计结合起来检查，再为**电路板、贴片装配和结构件自动下单**，让设计进入真实制造与交付。
+
+我想实现的体验是：**说出一个想要的东西，过一个星期，它就出现在家门口。**
+
+这就是我做 FormForge 的目标：让“描述需求”到“收到实物”之间的距离越来越短。它是我希望逐步实现的完整体验；现阶段仍需要人在关键方案、工程复核和制造环节参与，实际交付周期取决于工艺和供应商。
+
+为此，我把**需求、原理图、PCB、机械结构、固件和制造资料**放进同一个工程工作台。人可以在网页中查看和调整设计，外部 AI Agent 通过 MCP 调用工具，每一步留下实际工程文件、版本和检查结果。
+
+我希望它既能帮助想把创意做成实物的人，也能成为开发硬件 Agent 时可以直接调用的工程工具。
 
 | 游戏手柄装配模型 | 游戏手柄爆炸视图 |
 | --- | --- |
 | ![游戏手柄的外壳、摇杆与按键装配模型](docs/images/gamepad-assembled.png) | ![游戏手柄外壳、PCBA、按键和紧固件的爆炸视图](docs/images/gamepad-exploded.png) |
 
-*图中为设计过程中的 CAD 模型与软件界面示例。示例工程文件未随源码分发；图片不代表产品已经完成实物或制造验收。*
+*下面是我在 FormForge 中的项目设计与软件界面，包含装配模型、PCB、原理图和固件工作区。*
 
 ## 可以用它做什么
 
@@ -26,7 +38,7 @@ FormForge 是一个运行在本机的产品工程工作台，把**需求、原�
 | 准备制造 | 整理 Gerber、BOM、贴装坐标及结构件文件，解析外部制造资料，使用受控的供应商流程 |
 | 管理工程 | 保留修订、候选、任务、失败记录、报告和资料来源，导入或导出工程包 |
 
-当前首个 EDA 后端为 **KiCad 10**。布局布线保留 FormForge 自研实现；机械建模使用 CadQuery / OpenCascade，固件构建使用 ARM GNU Toolchain。
+我选择 **KiCad 10** 作为首个 EDA 后端，并保留 FormForge 自研的布局布线实现；机械建模使用 CadQuery / OpenCascade，固件构建使用 ARM GNU Toolchain。
 
 ## 从电路到结构与固件
 
@@ -83,7 +95,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File scripts/Setup.ps1
 powershell -NoProfile -ExecutionPolicy Bypass -File scripts/Start.ps1
 ~~~
 
-默认访问 [本机工作台](http://127.0.0.1:17840)，也可双击“启动FormForge.cmd”。首次运行会创建空白工程存储和新的本机 API 令牌。
+默认访问 [本机工作台](http://127.0.0.1:17840)，也可双击“启动FormForge.cmd”。
 
 按需要安装可选模块：
 
@@ -104,11 +116,11 @@ powershell -NoProfile -ExecutionPolicy Bypass -File scripts/Setup-Desktop.ps1
 
 固件构建还需安装 ARM GNU Toolchain，并在设置中选择工具链，或设置 FORMFORGE_ARM_GCC。KiCad 不在默认路径时，可设置 FORMFORGE_KICAD_CLI 和 FORMFORGE_KICAD_PYTHON。桌面版需要下载 Electron 运行时，网络受限时可使用安装脚本提供的 DownloadProxy 参数。
 
-MCP 使用服务的 /mcp 入口及 Bearer 认证，令牌见本机 .local/api-token.txt；也可通过 scripts/stdio-proxy.py 接入。令牌只供本机客户端配置使用，不要提交到仓库。
+MCP 使用服务的 /mcp 入口及 Bearer 认证，令牌见本机 .local/api-token.txt；也可通过 scripts/stdio-proxy.py 接入。
 
 ## 当前验证范围
 
-2026-11-04，从此私人仓库重新检出源码，在同一台 Windows 上新建 4 个独立 Python 环境安装测试：
+2026-11-04，我从仓库重新检出源码，在同一台 Windows 上新建 4 个独立 Python 环境进行了安装测试：
 
 - **62 项 Python 与 41 项 Node 定向检查通过**，覆盖工程、原生工具、机械、制造文件、离线烧录与浏览器策略等选定流程。
 - **8 种 STM32 × 2 种模板，共 16 次真实构建通过**，检查 ELF / HEX / BIN 与向量表。
@@ -130,12 +142,10 @@ node --test desktop/tests/*.test.cjs procurement-browser/tests/*.test.cjs
 
 上述仓库自带基础检查是完整本机验收的一部分，不包含全部 103 项外部验收用例。
 
-## 数据与发布状态
+## 开源协议
 
-应用工程与运行数据默认保存在本机。此仓库包含源码、依赖声明、必要运行资源、第三方许可和经过筛选的介绍图片；不附带日常工程包、订单、嘉立创账号、浏览器登录态或缓存。供应商功能需使用者自行配置和登录，报价、提交、付款和生产放行分别管理，付款与生产放行不自动执行。
+我以 **GNU General Public License v3.0（GPL-3.0-only）** 发布 FormForge。你可以按协议使用、学习、修改和分发它；如果分发修改后的程序，也需要遵守 GPL-3.0 的源码提供和许可要求。
 
-运行后生成的 data/、.local/、.cache/ 和浏览器配置目录应保持私有，不要强制添加到 Git。
+完整条款见 [LICENSE](LICENSE)。项目中保留独立许可的第三方代码、字体和资源，见 [第三方许可说明](THIRD_PARTY_NOTICES.md)。
 
-**仓库当前保持私有。未经所有者新的明确授权，不得修改为公开、发布公开版本或建立公开镜像。**
-
-项目自有代码尚未选定开源许可证；第三方代码、字体和资源保留各自的许可。公开前仍需完成代码权属与第三方授权复核。
+欢迎通过 Issues 和 Pull Requests 交流使用体验、报告问题或一起完善这个项目。

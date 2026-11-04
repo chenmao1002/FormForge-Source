@@ -4,6 +4,8 @@
 !/.gitattributes
 !/README.md
 !/README.en.md
+!/LICENSE
+!/THIRD_PARTY_NOTICES.md
 !/AGENTS.md
 !/package.json
 !/package-lock.json

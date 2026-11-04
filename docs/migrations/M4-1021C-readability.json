@@ -2,8 +2,8 @@
   "sourceRoot": "local-source/1021C",
   "sourceCommit": "f599e8aa3224ec89ab1168e17b84f4f57dc79281",
   "date": "2026-10-21",
-  "authorization": "User explicitly authorized local reuse of selected 1021C code and workflows.",
-  "license": "No applicable root/source module license found; UNKNOWN. Local user-authorized reuse only; no new redistribution grant asserted.",
+  "authorization": "Copyright owner authorized public release under GPL-3.0-only.",
+  "license": "GPL-3.0-only",
   "files": [
     {
       "source": "local-source/1021C/workers/circuit_path_readability.py",
@@ -75,5 +75,14 @@
       "runtimeCopied": false
     }
   ],
-  "scope": "Two pure geometry kernels and selected tests; no credentials, environments, history, third-party router or design-specific repair scripts."
+  "scope": "Two pure geometry kernels and selected tests; no credentials, environments, history, third-party router or design-specific repair scripts.",
+  "licenseAtMigration": "No applicable root/source module license found; UNKNOWN. Local user-authorized reuse only; no new redistribution grant asserted.",
+  "migrationAuthorization": "User explicitly authorized local reuse of selected 1021C code and workflows.",
+  "releaseLicense": "GPL-3.0-only",
+  "releaseAuthorization": {
+    "date": "2026-11-04",
+    "copyrightHolder": "chenmao1002",
+    "scope": "Included owner-authored code from earlier projects; third-party components retain their existing licenses.",
+    "statement": "Copyright owner confirmed ownership and authorized publication under GPL-3.0-only."
+  }
 }
