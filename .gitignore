@@ -28,6 +28,8 @@
 /docs/*
 !/docs/images/
 /docs/images/*
+!/docs/images/brick90-assembled.png
+!/docs/images/brick90-exploded.png
 !/docs/images/gamepad-assembled.png
 !/docs/images/gamepad-exploded.png
 !/docs/images/schematic-workspace.png

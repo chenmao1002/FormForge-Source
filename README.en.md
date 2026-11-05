@@ -4,6 +4,27 @@
 
 [中文](README.md) · English · [GPL-3.0](LICENSE)
 
+## Featured project: BRICK-90 retro handheld
+
+**Designing a retro handheld with an agent: circuits, PCB, enclosure, and game firmware.**
+
+I use BRICK-90 to show a real design workflow in FormForge. Starting from a portrait-format monochrome falling-block game handheld, I worked with an external agent calling engineering tools to develop the circuit, two-layer PCB, mechanical assembly, and STM32 game firmware through several rounds of changes and review.
+
+| BRICK-90 assembly | Internal layout and exploded view |
+| --- | --- |
+| ![BRICK-90 CAD assembly showing the enclosure, display, and controls](docs/images/brick90-assembled.png) | ![BRICK-90 exploded view showing the enclosure, display, buttons, PCBA, and battery compartment](docs/images/brick90-exploded.png) |
+
+*These are CAD previews. The screen artwork is a visual reference.*
+
+| Stage | What has been generated or checked in this case |
+| --- | --- |
+| Circuits and PCB | KiCad schematics, a two-layer PCB, and native ERC / DRC checks tied to the corresponding revisions |
+| Mechanical assembly | Enclosure, buttons, display retention, and battery compartment; STEP / GLB assemblies and individual printable STL parts |
+| Game firmware | STM32 game application, ARM GCC build outputs in ELF / HEX / BIN, and game-logic tests on the host computer |
+| Manufacturing preparation | Gerber, drill, BOM, placement, and mechanical-part files |
+
+This case includes human decisions and engineering review. The work so far covers the design files and checks above. Physical assembly, display and button operation, feel, and battery life still need prototype testing. Manufacturing and delivery have not been completed. I want to show what each step has actually achieved as I work toward a complete physical product.
+
 ## Why I am building FormForge
 
 I want making an electronic product to begin with a simple request:
@@ -20,12 +41,6 @@ To work toward that goal, I am bringing **requirements, schematics, PCB design, 
 
 I want FormForge to help people turn ideas into physical products and give hardware-agent developers a practical set of engineering tools.
 
-| Game controller assembly | Exploded assembly |
-| --- | --- |
-| ![Game controller CAD assembly with enclosure, sticks, and buttons](docs/images/gamepad-assembled.png) | ![Exploded controller assembly showing the enclosure, PCBA, controls, and fasteners](docs/images/gamepad-exploded.png) |
-
-*Below are examples of my design work in FormForge: assemblies, PCBs, schematics, and the firmware workspace.*
-
 ## What you can do
 
 | Work | Available capabilities |
@@ -40,7 +55,9 @@ I want FormForge to help people turn ideas into physical products and give hardw
 
 I chose **KiCad 10** as the first EDA backend and kept FormForge's own placement and routing implementation. Mechanical modeling uses CadQuery / OpenCascade, and firmware builds use the ARM GNU Toolchain.
 
-## From circuits to assemblies and firmware
+## More projects and workspaces
+
+The views below also show a USB receiver, a USB-RS422 interface board, a game controller, and a fan, along with BRICK-90 in the mechanical workspace.
 
 ### Schematics
 
@@ -60,9 +77,13 @@ The examples range from a USB-RS422 interface board with explicit pin legends to
 
 Treat the board and its components as a complete PCBA alongside the enclosure, battery, controls, and fasteners. Use parameters, part visibility, multiple views, and exploded assemblies to inspect the internal arrangement. Export engineering geometry for further editing and review.
 
-| Fan assembly and internal layout | Retro handheld enclosure |
+| Fan assembly and internal layout | BRICK-90 handheld workspace |
 | --- | --- |
 | ![Fan mechanical workspace with wireframe inspection, internal electronics, and the parts list](docs/images/fan-assembly.png) | ![Retro handheld mechanical workspace showing the enclosure, display, and controls](docs/images/handheld-assembly.png) |
+
+| Game controller assembly | Exploded assembly |
+| --- | --- |
+| ![Game controller CAD assembly with enclosure, sticks, and buttons](docs/images/gamepad-assembled.png) | ![Exploded controller assembly showing the enclosure, PCBA, controls, and fasteners](docs/images/gamepad-exploded.png) |
 
 ### Firmware
 
