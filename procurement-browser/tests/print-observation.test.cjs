@@ -5,7 +5,7 @@ function fixture(){
   const spec={files:[{path:'parts/front.stl'},{path:'parts/rear.stl'}],copiesPerPart:1,material:'9000HE',leadTimeHours:48,expectedPayableCny:13};
   const records=new Map(),wrappers=new Map();
   ids.forEach((id,i)=>{
-    const r={orderAccessId:id,orderCode:'G2610250227'+i,orderStatusName:'待审核',selectOrderAmountVO:{orderPayableAmount:i?5:8,orderActualAmount:0,orderExpressFee:i?0:5},selectOrderTimeVO:{orderPaymentTime:null,orderCreateTime:'2026-10-25'}};
+    const r={orderAccessId:id,orderCode:'TEST-ORDER-'+i,orderStatusName:'待审核',selectOrderAmountVO:{orderPayableAmount:i?5:8,orderActualAmount:0,orderExpressFee:i?0:5},selectOrderTimeVO:{orderPaymentTime:null,orderCreateTime:'2026-10-25'}};
     records.set(id,r);wrappers.set(id,{selectOrderInfoVO:r,selectOrderDetailsVO:{submitFactory:false,confirmOrderType:true},orderItemVOS:[{fileName:i?'rear.stl':'front.stl',itemCount:1,materialName:'9000HE',materialColor:'白色',materialDeliveryTime:48,modelAbnormalForfaceList:i?[{abnormalCode:'THIN_WALL',abnormalName:'薄壁结构',abnormalDesc:'建议加厚',imageUrl:'https://example.invalid/private?token=secret'}]:[]}]});
   });
   return {ids,spec,records,wrappers};
