@@ -4,6 +4,16 @@
 
 [中文](README.md) · English · [GPL-3.0](LICENSE)
 
+## Download the preview
+
+I have packaged **BRICK-90**, the retro handheld, and **SERVO8**, the eight-channel servo controller, as examples you can import, explore and study further.
+
+**[Download the complete Windows starter](https://github.com/chenmao1002/FormForge-Source/releases/download/v0.37.1-preview.1/FormForge-Examples-Windows.zip)** · [English guide](docs/EXAMPLES.en.md) · [中文指南](docs/EXAMPLES.md)
+
+Extract the ZIP and run `Start-Examples.cmd` to install dependencies, open the workbench and import both projects. Requires Windows x64, Python 3.12, Node.js 24 and Edge; initial installation needs internet access. Existing FormForge users can download the [BRICK-90](https://github.com/chenmao1002/FormForge-Source/releases/download/v0.37.1-preview.1/BRICK-90.formforge.zip) or [SERVO8](https://github.com/chenmao1002/FormForge-Source/releases/download/v0.37.1-preview.1/SERVO8.formforge.zip) project package separately.
+
+This preview lets you explore existing designs. SERVO8 includes circuits, PCB, firmware and a serial host tool. Physical communication and load tests remain open, and a complete mechanical assembly is not included.
+
 ## Featured project: BRICK-90 retro handheld
 
 **Designing a retro handheld with an agent: circuits, PCB, enclosure, and game firmware.**

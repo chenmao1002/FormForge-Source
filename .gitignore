@@ -26,6 +26,8 @@
 
 # Only reviewed provenance and functional standards belong here.
 /docs/*
+!/docs/EXAMPLES.md
+!/docs/EXAMPLES.en.md
 !/docs/images/
 /docs/images/*
 !/docs/images/brick90-assembled.png

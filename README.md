@@ -4,6 +4,16 @@
 
 中文 · [English](README.en.md) · [GPL-3.0](LICENSE)
 
+## 下载预发布体验包
+
+我把 **BRICK-90 复古掌机**和 **SERVO8 八路舵机控制板**一起整理成了可以导入、查看和继续研究的示例。
+
+**[下载 Windows 完整体验包](https://github.com/chenmao1002/FormForge-Source/releases/download/v0.37.1-preview.1/FormForge-Examples-Windows.zip)** · [中文使用指南](docs/EXAMPLES.md) · [English guide](docs/EXAMPLES.en.md)
+
+解压后运行 `Start-Examples.cmd`，即可安装依赖、打开工作台并导入两个工程。需要 Windows x64、Python 3.12、Node.js 24 和 Edge；首次安装需要联网。已有 FormForge 的用户也可以单独下载 [BRICK-90](https://github.com/chenmao1002/FormForge-Source/releases/download/v0.37.1-preview.1/BRICK-90.formforge.zip) 或 [SERVO8](https://github.com/chenmao1002/FormForge-Source/releases/download/v0.37.1-preview.1/SERVO8.formforge.zip) 工程包。
+
+这次预发布提供已有设计的查看与研究体验。SERVO8 包含电路、PCB、固件和电脑串口调试工具；实物通信与负载测试仍待完成，完整机械总成尚未提供。
+
 ## 主案例：BRICK-90 复古掌机
 
 **用 Agent 设计一台复古掌机：电路、PCB、外壳和游戏固件。**
