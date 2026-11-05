@@ -10,6 +10,12 @@
 
 我用 BRICK-90 展示 FormForge 的实际设计流程：从一台老式竖屏黑白俄罗斯方块掌机的需求出发，通过外部 Agent 调用工程工具，逐步完成电路、双层 PCB、结构装配和 STM32 游戏固件，并经过多轮修改与复核。
 
+[![BRICK-90 设计流程演示：点击动图查看完整视频](docs/images/brick90-demo.gif)](docs/videos/brick90-design-demo.mp4)
+
+**[▶ 观看 / 下载完整设计流程视频（1 分 37 秒）](docs/videos/brick90-design-demo.mp4)**
+
+1080p · 中文字幕 · 无旁白。视频回顾已有工程的需求、原理图、PCB、结构装配、固件和制造资料；上方动图截取其中的结构展开过程。
+
 | BRICK-90 装配模型 | 内部结构与爆炸视图 |
 | --- | --- |
 | ![BRICK-90 复古掌机的 CAD 装配模型，展示外壳、屏幕和按键](docs/images/brick90-assembled.png) | ![BRICK-90 爆炸视图，展示外壳、屏幕、按键、PCBA 和电池仓](docs/images/brick90-exploded.png) |

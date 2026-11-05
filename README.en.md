@@ -10,6 +10,12 @@
 
 I use BRICK-90 to show a real design workflow in FormForge. Starting from a portrait-format monochrome falling-block game handheld, I worked with an external agent calling engineering tools to develop the circuit, two-layer PCB, mechanical assembly, and STM32 game firmware through several rounds of changes and review.
 
+[![BRICK-90 design walkthrough: click the animation for the full video](docs/images/brick90-demo.gif)](docs/videos/brick90-design-demo.mp4)
+
+**[▶ Watch / download the full design walkthrough (1 min 37 sec)](docs/videos/brick90-design-demo.mp4)**
+
+1080p · Chinese captions · no narration. The video reviews the existing project's requirements, schematics, PCB, mechanical assembly, firmware, and manufacturing files. The animation above is an excerpt of the exploded assembly view.
+
 | BRICK-90 assembly | Internal layout and exploded view |
 | --- | --- |
 | ![BRICK-90 CAD assembly showing the enclosure, display, and controls](docs/images/brick90-assembled.png) | ![BRICK-90 exploded view showing the enclosure, display, buttons, PCBA, and battery compartment](docs/images/brick90-exploded.png) |

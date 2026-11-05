@@ -30,6 +30,7 @@
 /docs/images/*
 !/docs/images/brick90-assembled.png
 !/docs/images/brick90-exploded.png
+!/docs/images/brick90-demo.gif
 !/docs/images/gamepad-assembled.png
 !/docs/images/gamepad-exploded.png
 !/docs/images/schematic-workspace.png
@@ -38,6 +39,9 @@
 !/docs/images/fan-assembly.png
 !/docs/images/handheld-assembly.png
 !/docs/images/firmware-workspace.png
+!/docs/videos/
+/docs/videos/*
+!/docs/videos/brick90-design-demo.mp4
 !/docs/migrations/
 /docs/migrations/*
 !/docs/migrations/M3-parser.json
